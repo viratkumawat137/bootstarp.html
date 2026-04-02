@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang= "en">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +16,7 @@
         .color-circle { width: 15px; height: 15px; border-radius: 50%; display: inline-block; margin-right: 10px; border: 1px solid #eaeaec; }
         .more-link { color: #ff3f6c; font-size: 13px; font-weight: 600; text-decoration: none; display: block; margin-top: 10px; }
         
-        /* Custom Pink Checkbox/Radio */ 
+        /* Custom Pink Checkbox/Radio */
         .form-check-input:checked { background-color: #ff3f6c; border-color: #ff3f6c; }
         .form-check-input:focus { box-shadow: 0 0 0 0.25rem rgba(255, 63, 108, 0.25); }
 
@@ -68,10 +68,11 @@ background-color:rgb(251,110,66);}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
             <div class="d-flex gap-3">
-                <span class="text-white fw-semibold" style="cursor:pointer">Men</span>
-                <span class="text-white fw-semibold" style="cursor:pointer">Women</span>
-                <span class="text-white fw-semibold" style="cursor:pointer">Kids</span>
-                <span class="text-white fw-semibold" style="cursor:pointer">Home</span>
+                  <a href="./D-mart.html"><span class="text-white fw-semibold"  style="cursor:pointer">Home</span></a>
+                <a href="./man -dmart.html"><span class="text-white fw-semibold"  style="cursor:pointer">Men</span></a>
+                <a href="./women D-mart.html"><span class="text-white fw-semibold"  style="cursor:pointer">Women</span></a>
+                <a href="./d-mart location.html"><span class="text-white fw-semibold"  style="cursor:pointer">Location</span></a>
+              
             </div>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search">
@@ -315,16 +316,66 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹1999</span>
                                     <span class="text-success small ms-2">(60% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
-                            </div>
+                                 <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                            
                         </div>
                     </div>
+                </div>
 
                    
 
                     
 
-                    <div class="col">
+                    <div  class="col">
                         <div class="card h-80 shadow-sm">
                             <img src="./shirt 2man.webp" class="card-img-top" alt="Product 2">
                             <div class="card-body">
@@ -335,12 +386,64 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                  
+         
+<!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
                             </div>
                         </div>
                     </div>
-<div class="col">
-                        <div class="card h-80 shadow-sm">
+
+                         <div class="col">
+                         <div class="card h-80 shadow-sm">
                             <img src="./shirts 3 man.webp" class="card-img-top" alt="Product 2">
                             <div class="card-body">
                                 <h6 class="card-title fw-bold">Aura</h6>
@@ -350,12 +453,62 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
-<div class="col">
-                        <div class="card h-80 shadow-sm">
+                         <div class="col">
+                         <div class="card h-80 shadow-sm">
                             <img src="./men jens 1.webp" class="card-img-top" alt="Product 2">
                             <div class="card-body">
                                 <h6 class="card-title fw-bold">KALINI </h6>
@@ -365,12 +518,62 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div  class="col">
                         <div class="card h-80 shadow-sm">
                             <img src="./men jens 2.webp" class="card-img-top" alt="Product 2">
                             <div class="card-body">
@@ -381,12 +584,62 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div  class="col">
                         <div class="card h-80 shadow-sm">
                             <img src="./men jens 3.webp" class="card-img-top" alt="Product 2">
                             <div class="card-body">
@@ -397,12 +650,62 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div  class="col">
                         <div class="card h-80 shadow-sm">
                             <img src="./men shoes 1.avif" class="card-img-top" alt="Product 2">
                             <div class="card-body">
@@ -413,12 +716,62 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div  class="col">
                         <div class="card h-80 shadow-sm">
                             <img src="./men shoes 2.avif" class="card-img-top" alt="Product 2">
                             <div class="card-body">
@@ -429,12 +782,62 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div  class="col">
                         <div class="card h-80 shadow-sm">
                             <img src="./men shoes 3.avif" class="card-img-top" alt="Product 2">
                             <div class="card-body">
@@ -445,7 +848,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -461,7 +914,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -477,7 +980,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -493,7 +1046,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -509,7 +1112,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -525,7 +1178,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -541,7 +1244,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -557,7 +1310,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -573,7 +1376,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -589,7 +1442,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -605,7 +1508,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -621,7 +1574,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -637,7 +1640,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -653,7 +1706,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -670,7 +1773,57 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹999</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+                                
                             </div>
                         </div>
                     </div>
@@ -686,7 +1839,58 @@ background-color:rgb(251,110,66);}
                                     <span class="text-decoration-line-through text-muted small ms-2">₹799</span>
                                     <span class="text-success small ms-2">(50% OFF)</span>
                                 </div>
-                                <a href="#" class="btn btn-sm btn-outline-danger w-100">Add to Bag</a>
+                                <!-- new -->
+
+  <div class="row">
+               <div class="col-6"> <button class="btn btn- btn-outline-danger rounded-5 w-100">Add to Bag</button></div>
+              <div class="col-6"> <button class="btn btn- btn-outline-danger  rounded-5  w-100  " data-bs-toggle= "modal" data-bs-target= "#buyNowModal" > Buy Now  </button></div>
+                   
+              
+                
+            </div>
+        
+
+<div class="modal fade" id="buyNowModal" tabindex="-1" aria-labelledby="buyNowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="buyNowModalLabel">Checkout Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Shipping Address</label>
+                        <textarea class="form-control" rows="2" placeholder="Your address..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Payment Method</label>
+                        <select class="form-select">
+                            <option selected>Cash on Delivery</option>
+                            <option value="1">UPI / Net Banking</option>
+                            <option value="2">Credit/Debit Card</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- new ends  -->
+
+
                             </div>
                         </div>
                     </div>
