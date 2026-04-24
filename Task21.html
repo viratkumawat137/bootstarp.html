@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* LOGO */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3b4cca;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: linear-gradient(135deg, #5b6cff, #6f5bdc);
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+}
+
+.dropdown a {
+    display: block;
+    color: #fff;
+    padding: 8px 12px;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+/* RIGHT BUTTONS */
+.right {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.login {
+    text-decoration: none;
+    color: #000;
+}
+
+.signup {
+    background: linear-gradient(45deg, #5a67d8, #4c51bf);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* LEFT */
+.hero {
+    flex: 1;
+    min-width: 300px;
+    padding: 50px;
+    background: linear-gradient(135deg, #e6dcc8, #eac1c1);
+}
+.content{
+  margin-top:150px;
+
+}
+.content h1 {
+  margin-top:50px;
+
+    font-size: 40px;
+}
+
+.content span {
+    color: #5b6cff;
+}
+
+/* RIGHT */
+.sec2-content1 {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    background: linear-gradient(135deg, #eac1c1, #e6dcc8);
+    
+}
+
+.sec2-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+/* SEARCH */
+.search-box {
+    display: flex;
+    margin-top: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background: #5a67d8;
+    color: #fff;
+    border: none;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu {
+        display: none; /* simple version */
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+}
+
+
+
+
+
+/* Container to align cards in a row */
+.stats-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: sans-serif;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual Card Design */
+.stat-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  min-width: 200px;
+  border: 1px solid #f0f0f0;
+  margin-top: -63px;
+}
+
+
+/* The circular icon background */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* Colors for the icon circles */
+.red-bg { background-color: #fff5f5; color: #ff4d4d; }
+.blue-bg { background-color: #f0f3ff; color: #4d7cff; }
+.purple-bg { background-color: #f8f0ff; color: #a855f7; }
+.cyan-bg { background-color: #e6fbff; color: #06b6d4; }
+
+/* Text Styling */
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0b1a4a;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+/* Search Box */ 
+.search-box { display: flex;
+     width: 100%; max-width: 600px;
+      border: 1px solid #ccc;
+       background: #eee; }
+
+
+
+
+
+
+
+/* page 2 */
+
+
+/* Header */
+.header {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+    background:linear-gradient(135deg,#e3f6e9,#bbaa89);
+}
+
+.header h1 {
+    font-size: 42px;
+    color: #0b1c48;
+    margin-bottom: 15px;
+}
+
+.header p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Cards */
+.container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Circle numbers */
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Different colors */
+.c1 { background: #fde8e8; color: #ff4d4d; }
+.c2 { background: #e8ecfd; color: #4d6bff; }
+.c3 { background: #f3e8fd; color: #a64dff; }
+.c4 { background: #e8f7fd; color: #4db8ff; }
+
+.card h3 {
+    color: #0b1c48;
+    margin-bottom: 10px;
+}
+.card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.signup-blue { background: linear-gradient(45deg, #5a67d8, #4c51bf);
+     color: #fff; padding: 10px 40px ;
+      font-size: 22px; font-weight: 600; 
+      border: none; border-radius: 6px; cursor: pointer; } 
+      .signup-blue:hover { background: linear-gradient(45deg, #bfae4c, #419065); }
+
+
+
+
+
+
+/* PAGE 3 START */
+.hero {
+    width: 90vw;
+    height:100vh;
+    /* margin-top: 50px; */
+}
+.hero-section-3 {
+  padding: 80px 10%;
+  background: #f9f9fb;
+  /* width:100vw; */
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Left Image */
+.hero-image {
+   margin-left:40px;
+  position: relative;
+  
+  min-width: 300px;
+  
+  float: left;
+
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+/* Decorative circles */
+.circle.red {
+  width: 80px;
+  height: 80px;
+  border: 6px solid #ff6b6b;
+  position: absolute;
+  bottom: -50px;
+  left: -40px;
+  border-radius: 50%;
+}
+
+.circle.blue {
+  width: 15px;
+  height: 15px;
+  background: #f54c4c;
+  position: absolute;
+  top: 34px;
+  left: 30px;
+  border-radius: 50%;
+}
+
+/* Small image */
+.small-img {
+  position: absolute;
+  bottom: -30px;
+  right: -40px;
+}
+
+.small-img img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+/* Right Content */
+.hero-content {
+  margin-right:100px;
+  min-width: 300px;
+  float: left;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.hero-content ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.hero-content ul li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.hero-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4c6ef5;
+}
+
+/* Button */
+.btn {
+  padding: 12px 25px;
+  background: #4c6ef5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.small-img22{
+  margin-top:240px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .small-img {
+    display: none;
+  }
+}
+
+/* PAGE 3 END */
+/* PAGE 3 END */
+
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🎓 Eduleb</div>
+
+    <ul class="menu">
+        <li>
+            <a href="#">HOME ▼</a>
+            <div class="dropdown">
+                <a href="#">Home 01</a>
+                <a href="#">Home 02</a>
+            </div>
+        </li>
+
+        <li><a href="#">ABOUT</a></li>
+
+        <li>
+            <a href="#">COURSE ▼</a>
+            <div class="dropdown">
+                <a href="#">Course</a>
+                <a href="#">Course Details</a>
+            </div>
+        </li>
+<li> <a href="#">PAGES ▼</a> <div class="dropdown"> <a href="#">Instructor</a> 
+    <a href="#">Instructor Details</a> 
+    <a href="#">Pricing Plan</a>
+     <a href="#">Faq Page</a>
+     <a href="#">404</a> </div> </li>
+        <li><a href="#">BLOG</a></li>
+    </ul>
+
+
+
+
+
+    <div class="right">
+        <a href="#" class="login">LOG IN</a>
+        
+    </div>
+    <DIV CLASS="signup-blue">SIGN UP</DIV>
+</nav>
+
+<!-- SECTION -->
+<div class="sections">
+
+    <div class="hero">
+        <div class="content">
+            <h1>
+                <span>Smart Study</span><br>
+                Where <br>Knowledge Meets<br> the Web
+            </h1>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
+                Lorem ipsum dolor sit amet,  adipisicing elit,<br>
+                 consectetur adipiscing elit tempor ut labore
+            </p>
+
+           <div class="search-box"> 
+            <input type="text" placeholder="Search Your Course Here"> 
+            <button> Search
+                 <span>✈️</span> </button>
+         </div>
+
+        </div>
+    </div>
+
+    <div class="sec2-content1">
+        <img  class="small-img22"  src="./download.png" alt="">
+
+    </div>
+
+</div>
+
+
+<div class="stats-container">
+  <!-- Card 1 -->
+  <div class="stat-card">
+    <div class="icon-circle red-bg">📁</div>
+    <div class="stat-info">
+      <span class="stat-number">134</span>
+      <span class="stat-label">Our Online Course</span>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="stat-card">
+    <div class="icon-circle blue-bg">🎓</div>
+    <div class="stat-info">
+      <span class="stat-number">299</span>
+      <span class="stat-label">Academic Programs</span>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="stat-card">
+    <div class="icon-circle purple-bg">📋</div>
+    <div class="stat-info">
+      <span class="stat-number">684</span>
+      <span class="stat-label">Certified Students</span>
+    </div>
+  </div>
+
+
+
+  <!-- Card 4-->
+  <div class="stat-card">
+    <div class="icon-circle cyan-bg">👤</div>
+    <div class="stat-info">
+      <span class="stat-number">941</span>
+      <span class="stat-label">Enrolled Students</span>
+    </div>
+  </div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<!--  page 2nd  -->
+<div class="header">
+    <h1>.Start your journey With us.</h1>
+    <p>
+        We offer a brand new approach to the most basic learning paradigms.
+        Choose from a wide range of learning options and gain new skills!
+        Our school is know.
+    </p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <div class="circle c1">01</div>
+        <h3>Expert Teacher</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
+    </div>
+
+    <div class="card">
+        <div class="circle c2">02</div>
+        <h3>Quality Education</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
+    </div>
+
+    <div class="card">
+        <div class="circle c3">03</div>
+        <h3>Remote Learning</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
+    </div>
+
+    <div class="card">
+        <div class="circle c4">04</div>
+        <h3>Life Time Support</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
+    </div>
+
+
+<!-- page 4  -->
+<!-- page 4  -->
+<div class="hero">
+  <div class="hero-container">
+
+    <!-- Left Image -->
+    <div class="hero-image">
+      <img src="./education-concept-smiling-brunette-girl-student-casual-clothes-holds-her-books-study-material.jpg" alt="Student">
+      <div class="circle red">
+         <div class="circle blue"></div>
+      </div>
+      <!-- <div class="circle blue"></div> -->
+
+      <!-- Small image -->
+      <div class="small-img">
+        <img src="./front-view-young-beautiful-lady-red-t-shirt-black-jeans-holding-different-copybooks-files-smiling-with-bag-white.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- Right Content --> 
+    <div class="hero-content">
+      <h1>We Are Providing The Online <br>Course In Global World</h1>
+<br>
+      <p>
+      We offer a brand new approach to the most basic learning paradigms.<br>
+      Choose from a wide range of learning options and gain new skills! <br>
+      Our school is know.<br>
+      </p>
+
+       <p>
+      We offer a brand new approach to the most basic learning paradigms.<br>
+      Choose from a wide range of learning options and gain new skills! <br>
+      Our school is know.<br>
+      </p>
+
+      <ul>
+      <li>Get access to 12,000+ of our top courses</li><br>
+      <li>Popular topic to learn now in our online courses</li><br>
+      <li>Find the right instructor for you</li><br>
+      </ul>
+<br>
+      <a href="#" class="btn">View All Courses →</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+</body>
+</html> 
