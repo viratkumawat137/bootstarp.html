@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">                                        
-<head>                            
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Responsive Navbar</title>
@@ -550,8 +550,8 @@ body {
 }
 /* page 6-22 start  */
 
-/* .page22{
-  width:98vw;
+.page22
+  /* {width:98vw;
     font-family: Arial, Helvetica, sans-serif;
     background:#f5f7fb;
     margin:0;
@@ -622,6 +622,250 @@ body {
 }
 
 /* pages 6-22 end */
+
+
+/* page 6-23 start   */
+/* Container */
+.section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+/* Flex Layout */
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Left Text */
+.text {
+    font-size: 28px;
+    font-weight: 600;
+    color: #0b1c3d;
+    line-height: 1.4;
+}
+
+.text span {
+    color: #5b6cff;
+}
+
+/* Logos */
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.logos img {
+    height: 40px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.logos img:hover {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logos {
+        justify-content: center;
+    }
+}
+
+/* page 2-23 end */
+
+/* page 2-24 start  */
+
+
+.video-section{
+    position: relative;
+    /* width: 100vw; */
+    /* height: 80vh; */
+    text-align: center;
+    /* margin: 50px auto; */
+
+}
+
+
+/* page 2-24 end  */
+
+/* page 2-25 start  */
+/* SECTION */
+.instructors {
+    background-color: #f4f4f4;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* HEADING */
+.instructors h2 {
+    font-size: 40px;
+    color: #0b1445;
+    margin-bottom: 20px;
+}
+
+/* PARAGRAPH */
+.instructors p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+/* page 2-25 end */
+
+/* page 2-26 start  */
+/* SECTION */
+.team-section{
+    display:flex;
+    justify-content:center;
+}
+
+/* CONTAINER */
+.team-container{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+/* CARD */
+.team-card{
+    width:260px;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
+
+.team-card:hover{
+    transform:translateY(-5px);
+}
+
+/* IMAGE */
+.team-img{
+    position:relative;
+    overflow:hidden;
+    
+}
+
+.team-img img{
+    width:100%;
+    display:block;
+}
+
+/* SOCIAL BAR */
+.team-social{
+    position:absolute;
+    top:50%;
+    left:-60px;
+    transform:translateY(-50%);
+    background:#4c5bd4;
+    padding:12px 10px;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    transition:0.4s;
+}
+
+.team-social{
+    position:absolute;
+    top:50%;
+    left:-60px;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    border-radius:8px;
+}
+
+/* Common icon style */
+.team-social .icon{
+    width:30px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+/* Default colors */
+.icon.close{ background:#5a5bd6; }
+.icon.fb{ background:#5a5bd6; }
+.icon.li{ background:#5a5bd6; }
+
+/* HOVER EFFECT (alag alag) */
+.icon.close:hover{
+    background:#ff4d4d;
+}
+
+.icon.fb:hover{
+    background:#1877f2; /* Facebook blue */
+}
+
+.icon.li:hover{
+    background:#0077b5; /* LinkedIn blue */
+}
+
+/* Slide effect */
+.team-img:hover .team-social{
+    left:10px;
+}
+
+/* HOVER EFFECT */
+.team-img:hover .team-social{
+    left:10px;
+}
+
+/* CONTENT */
+.team-content{
+    padding:15px;
+}
+
+.team-content h3{
+    margin:10px 0 5px;
+    color:#0d1b4c;
+}
+
+.team-content p{
+    margin:0;
+    color:#777;
+    font-size:14px;
+}
+
+/* INFO */
+.team-info{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 15px 15px;
+    font-size:14px;
+    color:#1a2b6d;
+}
+
+.team-info span{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+/* page 2-26 end  */
+
 </style>
 </head>
 
@@ -1041,7 +1285,6 @@ Our school is known for quality education and practical learning.<br>
 
 <div class="meta22">
 <span>32 Course</span>
-    
 <span>2 Hrs 32 Min</span>
 </div>
 
@@ -1052,5 +1295,160 @@ Our school is known for quality education and practical learning.<br>
 </div>
 </div>
 <!-- pages 6-22  -->
+
+
+
+
+<!-- page 6-23 start  -->
+ <div class="section">
+    <div class="section-content">
+
+        <!-- Left Text -->
+        <div class="text">
+            Helping <span>86,000+</span> global <br>
+            companies take the gloves off
+        </div>
+
+        <!-- Logos -->
+        <div class="logos">
+            <img src="logo1.png" alt="Diamond">
+            <img src="logo2.png" alt="Rixdot">
+            <img src="logo3.png" alt="Eight Roles">
+            <img src="logo4.png" alt="Reload">
+        </div>
+
+    </div>
+</div>
+
+<!-- page 2-23 end  -->
+
+
+
+
+
+
+
+
+<!-- page 2-24 start  -->
+
+
+
+
+
+ <div class="video-section">
+<video 
+    src="./videoplayback (3).mp4"
+    controls
+    autoplay
+    muted
+    loop
+    width="1100vw"
+    height="500vh"
+   ></video>
+</div>
+
+
+<!-- page 2-24 end   -->
+
+<!-- page 2-25 start  -->
+ <section class="instructors">
+    <h2>Meet our Instructors</h2>
+    <p>
+        We offer a brand new approach to the most basic learning paradigms.
+        Choose from a wide range of learning options and gain new skills!
+        Our school is known for its innovative teaching methods.
+    </p>
+</section>
+<!-- page 2-25 end  -->
+
+<!-- page 2-26 start  -->
+ <section class="team-section">
+
+<div class="team-container">
+
+    <!-- Card 1 -->
+    <div class="team-card">
+        <div class="team-img">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg">
+           <div class="team-social">
+    <a href="#" class="icon close"><i class="fa fa-times"></i></a>
+    <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+</div>
+        </div>
+        <div class="team-content">
+            <h3>Bilkis Vabi</h3>
+            <p>Web designer</p>
+        </div>
+        <div class="team-info">
+            <span><i class="fa fa-file"></i> 04 Course</span>
+            <span><i class="fa fa-user"></i> 27 Student</span>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="team-card">
+        <div class="team-img">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg">
+            <div class="team-social">
+    <a href="#" class="icon close"><i class="fa fa-times"></i></a>
+    <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+</div>
+        </div>
+        <div class="team-content">
+            <h3>Mood Wasim</h3>
+            <p>TemplateMonster company</p>
+        </div>
+        <div class="team-info">
+            <span><i class="fa fa-file"></i> 06 Course</span>
+            <span><i class="fa fa-user"></i> 41 Student</span>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="team-card">
+        <div class="team-img">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg">
+            <div class="team-social">
+    <a href="#" class="icon close"><i class="fa fa-times"></i></a>
+    <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+</div>
+        </div>
+        <div class="team-content">
+            <h3>Shyinn tim</h3>
+            <p>Codecanyou</p>
+        </div>
+        <div class="team-info">
+            <span><i class="fa fa-file"></i> 13 Course</span>
+            <span><i class="fa fa-user"></i> 31 Student</span>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="team-card">
+        <div class="team-img">
+            <img src="https://randomuser.me/api/portraits/men/76.jpg">
+            <div class="team-social">
+    <a href="#" class="icon close"><i class="fa fa-times"></i></a>
+    <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+</div>
+        </div>
+        <div class="team-content">
+            <h3>Shorif shorifa</h3>
+            <p>Tsc chottor</p>
+        </div>
+        <div class="team-info">
+            <span><i class="fa fa-file"></i> 07 Course</span>
+            <span><i class="fa fa-user"></i> 24 Student</span>
+        </div>
+    </div>
+
+</div>
+
+</section>
+<!-- page 2-26 end -->
 </body>
 </html>
