@@ -1,1988 +1,2114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>                                
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Navbar</title>          
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduleb Navbar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  /* background: #0a0f3c; */
+
+}
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  background: #0a0f3c;
 }
-
-/* NAVBAR */
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-/* LOGO */
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #3b4cca;
-}
-
-/* MENU */
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    align-items: center;
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #1a1a1a;
-    font-weight: 500;
-}
-
-/* DROPDOWN */
-.dropdown {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    background: linear-gradient(135deg, #5b6cff, #6f5bdc);
-    padding: 10px;
-    border-radius: 8px;
-    display: none;
-}
-
-.dropdown a {
-    display: block;
-    color: #fff;
-    padding: 8px 12px;
-}
-
-.menu li:hover .dropdown {
-    display: block;
-}
-
-/* RIGHT BUTTONS */
-.right {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.login {
-    text-decoration: none;
-    color: #000;
-}
-
-.signup {
-    background: linear-gradient(45deg, #5a67d8, #4c51bf);
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
-
-/* HERO SECTION */
-.sections {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* LEFT */
-.hero {
-    flex: 1;
-    min-width: 300px;
-    padding: 50px;
-    background: linear-gradient(135deg, #e6dcc8, #eac1c1);
-}
-.content{
-  margin-top:150px;
-
-}
-.content h1 {
-  margin-top:50px;
-
-    font-size: 40px;
-}
-
-.content span {
-    color: #5b6cff;
-}
-
-/* RIGHT */
-.sec2-content1 {
-    flex: 1;
-    min-width: 300px;
-    padding: 40px;
-    background: linear-gradient(135deg, #eac1c1, #e6dcc8);
-    
-}
-
-.sec2-content1 img {
-    width: 100%;
-    height: auto;
-}
-
-/* SEARCH */
-.search-box {
-    display: flex;
-    margin-top: 20px;
-}
-
-.search-box input {
-    flex: 1;
-    padding: 10px;
-}
-
-.search-box button {
-    padding: 10px 20px;
-    background: #5a67d8;
-    color: #fff;
-    border: none;
-}
-
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-    .menu {
-        display: none; /* simple version */
-    }
-
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .content h1 {
-        font-size: 28px;
-    }
-}
-
-
-
-
-
-/* Container to align cards in a row */
-.stats-container {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  font-family: sans-serif;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Individual Card Design */
-.stat-card {
-  background: #fff;
-  border-radius: 15px;
-  padding: 25px 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  min-width: 200px;
-  border: 1px solid #f0f0f0;
-  margin-top: -63px;
-}
-
-
-/* The circular icon background */
-.icon-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-}
-
-/* Colors for the icon circles */
-.red-bg { background-color: #fff5f5; color: #ff4d4d; }
-.blue-bg { background-color: #f0f3ff; color: #4d7cff; }
-.purple-bg { background-color: #f8f0ff; color: #a855f7; }
-.cyan-bg { background-color: #e6fbff; color: #06b6d4; }
-
-/* Text Styling */
-.stat-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-number {
-  font-size: 24px;
-  font-weight: bold;
-  color: #0b1a4a;
-}
-
-.stat-label {
-  font-size: 14px;
-  color: #666;
-  margin-top: 4px;
-}
-/* Search Box */ 
-.search-box { display: flex;
-     width: 100%; max-width: 600px;
-      border: 1px solid #ccc;
-       background: #eee; }
-
-
-
-
-
-
-
-/* page 2 */
-
 
 /* Header */
-.header {
-    text-align: center;
-    max-width: 700px;
-    margin: auto;
-    background:linear-gradient(135deg,#e3f6e9,#bbaa89);
+header {
+  background: #fff;
+  padding: 15px 0;
 }
 
-.header h1 {
-    font-size: 42px;
-    color: #0b1c48;
-    margin-bottom: 15px;
-}
-
-.header p {
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Cards */
 .container {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: #f5f5f5;
-    padding: 25px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* Circle numbers */
-.circle {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Different colors */
-.c1 { background: #fde8e8; color: #ff4d4d; }
-.c2 { background: #e8ecfd; color: #4d6bff; }
-.c3 { background: #f3e8fd; color: #a64dff; }
-.c4 { background: #e8f7fd; color: #4db8ff; }
-
-.card h3 {
-    color: #0b1c48;
-    margin-bottom: 10px;
-}
-.card p {
-    color: #666;
-    line-height: 1.5;
-}
-
-.signup-blue { background: linear-gradient(45deg, #5a67d8, #4c51bf);
-     color: #fff; padding: 10px 40px ;
-      font-size: 22px; font-weight: 600; 
-      border: none; border-radius: 6px; cursor: pointer; } 
-      .signup-blue:hover { background: linear-gradient(45deg, #bfae4c, #419065); }
-
-
-
-
-
-
-/* PAGE 3 START */
-.hero {
-    width: 90vw;
-    height:100vh;
-    /* margin-top: 50px; */
-}
-.hero-section-3 {
-  padding: 80px 10%;
-  background: #f9f9fb;
-  /* width:100vw; */
-}
-
-.hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-/* Left Image */
-.hero-image {
-   margin-left:40px;
-  position: relative;
-  
-  min-width: 300px;
-  
-  float: left;
-
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 350px;
-  border-radius: 10px;
-}
-
-/* Decorative circles */
-.circle.red {
-  width: 80px;
-  height: 80px;
-  border: 6px solid #ff6b6b;
-  position: absolute;
-  bottom: -50px;
-  left: -40px;
-  border-radius: 50%;
-}
-
-.circle.blue {
-  width: 15px;
-  height: 15px;
-  background: #f54c4c;
-  position: absolute;
-  top: 34px;
-  left: 30px;
-  border-radius: 50%;
-}
-
-/* Small image */
-.small-img {
-  position: absolute;
-  bottom: -30px;
-  right: -40px;
-}
-
-.small-img img {
-  width: 150px;
-  border-radius: 8px;
-}
-
-/* Right Content */
-.hero-content {
-  margin-right:100px;
-  min-width: 300px;
-  float: left;
-}
-
-.hero-content h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.hero-content ul {
-  list-style: none;
-  margin-bottom: 20px;
-}
-
-.hero-content ul li {
-  margin-bottom: 10px;
-  padding-left: 25px;
-  position: relative;
-}
-
-.hero-content ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #4c6ef5;
-}
-
-/* Button */
-.btn {
-  padding: 12px 25px;
-  background: #4c6ef5;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-.small-img22{
-  margin-top:240px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .small-img {
-    display: none;
-  }
-}
-
-/* PAGE 3 END */
-/* PAGE 3 END */
-
-/* PAGE 4  START*/
-
-.PAGE4{
-  width: 98vw;
-  height:100vh;
-  background: linear-gradient(120deg, #f5e6c8, #cfd3f7);
-    position: absolute;
-    left: 0;
-
- }  
-
-
-.category-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.category {
-  background: #f1f1f1;
-  text-align:center;
-  padding: 15px 25px;
-  border-radius: 40px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-}
-
-.category:hover {
-  background: #4c6fff;
-  color: white;
-  transform: translateY(-3px);
-}
-
-/* page5 start  */
-
-
-
-
-.cta-section {
-  background: #ffffff;
-  padding: 60px 20px;
-}
-
-.cta-container {
-  max-width: 1100px;
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-.cta-container h2 {
-  font-size: 48px;
-  color: #0d1440;
-  line-height: 1.3;
-  margin: 0;
-}
-
-.cta-container h2 span {
-  color: #5b6cff;
+/* Logo */
+.logo {
+  font-size: 22px;
   font-weight: bold;
+  color:rgb(15,20,77);
+  margin-left: -70px;
+}
+.logo-img{
+  margin-right:60px;
 }
 
-.cta-btn {
-  background: #5b6cff;
-  color: white;
-  padding: 16px 30px;
-  border-radius: 6px;
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
   text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s ease;
+  color: #111;
+  font-weight: 500;
 }
 
-.cta-btn:hover {
-  background: #5cd13f;
- } 
- @media (max-width: 768px) {
-  .cta-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background:#111;
+  padding: 10px 0;
+  width: 160px;
+  display: none;
+  border-radius: 6px;
+  color:#111;
 
-  .cta-container h2 {
-    font-size: 32px;
-  }
-}
-/* page 6-22 start  */
-
-.page22
-  /* {width:98vw;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f5f7fb;
-    margin:0;
-    padding:40px;
-} */
-
-.container22{
-    /* max-width:1200px; */
-    width:90vw;
-    margin:auto;
 }
 
-.grid22{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:25px;
+.dropdown-menu li {
+  padding: 10px 20px;
 }
 
-.card22{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.06);
-    transition:.3s;
+.dropdown-menu a {
+  color: #fff;
 }
 
-.card22:hover{
-    transform:translateY(-5px);
+/* Hover effect */
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-.card22 img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+/* Auth buttons */
+.auth {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
-.body22{
-    padding:20px;
-    text-align:center;
+.auth .btn {
+  background:rgb(15,20,77);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.btn:hover{
+  background: #c4550c;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
 }
 
-.stars22{
-    color:#ff4d4d;
-    margin-bottom:10px;
+
+/* Mobile */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+
+
 }
 
-.title22{
-    font-size:18px;
-    font-weight:600;
-    color:#1e2a55;
-    margin-bottom:15px;
+#menu-toggle {
+  display: none;
+
+}
+.dropdown{
+   font-size: 20px;
+  font-weight: 900;
+  color:rgb(15,20,77);
+ 
+}
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: linear-gradient(360deg, #d7d3d3, #000000);
+  padding: 10px 0;
+  width: 200px;
+  display: none;
+  border-radius: 8px;
 }
 
-.meta22{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    font-size:14px;
-    color:#6b7280;
-    margin-bottom:15px;
+.dropdown-menu li {
+  padding: 10px 20px;
 }
 
-.price22{
-    border-top:1px solid #eee;
-    padding-top:15px;
-    font-weight:600;
-    color:#4f46e5;
+.dropdown-menu li:hover {
+  background: rgba(255,255,255,0.1);
 }
 
-/* pages 6-22 end */
+.dropdown-menu a {
+  color: #fff;
+  font-size: 14px;
+  color:#111;
 
-
-/* page 6-23 start   */
-/* Container */
-.section {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 40px;
-    background: #fff;
-    border-radius: 12px;
-    border: 1px solid #eee;
 }
 
-/* Flex Layout */
-.section-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  color:#111;
 }
 
-/* Left Text */
-.text {
-    font-size: 28px;
-    font-weight: 600;
-    color: #0b1c3d;
-    line-height: 1.4;
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
+.text-01{
 
-.text span {
-    color: #5b6cff;
-}
-
-/* Logos */
-.logos {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.logos img {
-    height: 40px;
-    opacity: 0.8;
-    transition: 0.3s;
-}
-
-.logos img:hover {
-    opacity: 1;
+  color:rgb(15,20,77);
+  font-size:25px;
+  font-weight:900;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .section-content {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .logos {
-        justify-content: center;
-    }
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
+
+  .menu li {
+    padding: 15px;
+  }
+
+  #menu-toggle:checked ~ nav .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .auth {
+    display: none;
+  }
+
+  /* Dropdown mobile */
+  .dropdown-menu {
+    position: static;
+    background: #eee;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
 
-/* page 2-23 end */
-
-/* page 2-24 start  */
 
 
-.video-section{
-    position: relative;
-    /* width: 100vw; */
-    /* height: 80vh; */
-    text-align: center;
-    /* margin: 50px auto; */
-
+.hero02 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
 }
 
-
-/* page 2-24 end  */
-
-/* page 2-25 start  */
-/* SECTION */
-.instructors {
-    background-color: #f4f4f4;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-/* HEADING */
-.instructors h2 {
-    font-size: 40px;
-    color: #0b1445;
-    margin-bottom: 20px;
-}
-
-/* PARAGRAPH */
-.instructors p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-}
-/* page 2-25 end */
-
-/* page 2-26 start  */
-/* SECTION */
-.team-section{
-    display:flex;
-    justify-content:center;
-}
-
-/* CONTAINER */
-.team-container{
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-/* CARD */
-.team-card{
-    width:260px;
-    background:#fff;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    text-align:center;
-    transition:0.3s;
-}
-
-.team-card:hover{
-    transform:translateY(-5px);
-}
-
-/* IMAGE */
-.team-img{
-    position:relative;
-    overflow:hidden;
-    
-}
-
-.team-img img{
-    width:100%;
-    display:block;
-}
-
-/* SOCIAL BAR */
-.team-social{
-    position:absolute;
-    top:50%;
-    left:-60px;
-    transform:translateY(-50%);
-    background:#4c5bd4;
-    padding:12px 10px;
-    border-radius:8px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    transition:0.4s;
-}
-
-.team-social{
-    position:absolute;
-    top:50%;
-    left:-60px;
-    transform:translateY(-50%);
-    display:flex;
-    flex-direction:column;
-    overflow:hidden;
-    border-radius:8px;
-}
-
-/* Common icon style */
-.team-social .icon{
-    width:30px;
-    height:45px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-/* Default colors */
-.icon.close{ background:#5a5bd6; }
-.icon.fb{ background:#5a5bd6; }
-.icon.li{ background:#5a5bd6; }
-
-/* HOVER EFFECT (alag alag) */
-.icon.close:hover{
-    background:#ff4d4d;
-}
-
-.icon.fb:hover{
-    background:#1877f2; /* Facebook blue */
-}
-
-.icon.li:hover{
-    background:#0077b5; /* LinkedIn blue */
-}
-
-/* Slide effect */
-.team-img:hover .team-social{
-    left:10px;
-}
-
-/* HOVER EFFECT */
-.team-img:hover .team-social{
-    left:10px;
-}
-
-/* CONTENT */
-.team-content{
-    padding:15px;
-}
-
-.team-content h3{
-    margin:10px 0 5px;
-    color:#0d1b4c;
-}
-
-.team-content p{
-    margin:0;
-    color:#777;
-    font-size:14px;
-}
-
-/* INFO */
-.team-info{
-    display:flex;
-    justify-content:space-between;
-    padding:10px 15px 15px;
-    font-size:14px;
-    color:#1a2b6d;
-}
-
-.team-info span{
-    display:flex;
-    align-items:center;
-    gap:5px;
-}
-/* page 2-26 end  */
-
-
-
-/* page 2-27 start */
-.choose-1 {
-  padding: 80px 10%;
-}
-
-.container-1 {
+.container02 {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
+  gap: 40px;
 }
 
- /* LEFT -- */
-.content-1 {
-  max-width: 550px;
+/* LEFT IMAGE */
+.hero-left02 img {
+  max-width: 100%;
+  height: auto;
 }
 
-.content-1 h1 {
-  font-size: 40px;
-  color: #0d1b4c;
+/* RIGHT CONTENT */
+.hero-right02 {
+  max-width: 600px;
+  color:#ccc;
+}
+
+.hero-right02 h1 {
+  font-size: 48px;
+  line-height: 1.3;
   margin-bottom: 20px;
 }
 
-.content-1 p {
-  color: #6c757d;
-  margin-bottom: 15px;
-  line-height: 1.6;
+.hero-right02 h1 span {
+  color: #ff6b6b;
 }
 
-.content-1 ul {
-  list-style: none;
-  margin: 20px 0;
+.hero-right02 p {
+  color: #cccbcb;
+  margin-bottom: 25px;
 }
 
-.content-1 ul li {
-  margin-bottom: 10px;
-  padding-left: 25px;
-  position: relative;
+/* SEARCH BOX */
+.hero-search02{
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.content-1 ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #5a67d8;
-  font-weight: bold;
+.hero-search02 input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
 }
 
-.btn-1 {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #5a67d8;
+.hero-search02 button {
+  padding: 15px 25px;
+  background: #5a67ff;
+  border: none;
   color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.btn-1:hover {
-  background: #904d41;
+.hero-search02 button:hover {
+  background: #3f4de0;
 }
 
-/* RIGHT */
-.image-box-1 {
-  position: relative;
-}
-
-.image-box-1 img {
-  width: 400px;
-  border-radius: 10px;
-}
-
-/* BADGE */
-.badge-1 {
-  position: absolute;
-  bottom: 30px;
-  right: -20px;
-  background: #fff;
-  padding: 15px 20px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.badge-1 span {
-  font-size: 25px;
-}
-
-.badge-1 h3 {
-  margin: 0;
-  font-size: 20px;
-}
-
-.badge-1 p {
-  margin: 0;
+/* TOPICS */
+.topics02 {
   font-size: 14px;
-  color: gray;
-} 
-/* page 2-27 end */
+  color: #ccc;
+}
 
+.topics02 a {
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 5px;
+}
 
-/* page 2-28 start */
-/* esme aad krna h code change krke  */
+/* 🔥 RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-right02 h1 {
+    font-size: 36px;
+  }
+}
 
-/* page 2-28 end */
-
-
-/* <!-- page 2-29 start --> */
-/* SECTION */
-.blog-section {
-    background-color: #f5f5f5;
-    padding: 80px 20px;
+@media (max-width: 768px) {
+  .container02 {
+    flex-direction: column;
     text-align: center;
+  }
+
+  .hero-left02 {
+    order: -1;
+  }
+
+  .hero-search02 {
+    flex-direction: column;
+  }
+
+  .hero-search02 input {
+    margin-bottom: 10px;
+  }
+
+  .hero-search02 button {
+    width: 100%;
+  }
 }
 
-/* HEADING */
-.blog-section h1 {
-    font-size: 48px;
-    color: #1a1f5a;
-    margin-bottom: 20px;
-    font-weight: 700;
+@media (max-width: 480px) {
+  .hero-right02 h1 {
+    font-size: 28px;
+  }
 }
 
-/* PARAGRAPH */
-.blog-section p {
-    max-width: 750px;
-    margin: auto;
-    font-size: 18px;
-    color: #555;
-    line-height: 1.8;
-}
- /* <!-- page 2-29 end --> */
 
- /* <!-- page 2-30 start --> */
- /* CONTAINER */
-.container-AA {
-    display: flex;
-    gap: 20px;
-    padding: 40px;
-    justify-content: center;
+
+
+
+
+
+/* SECTION */
+.c03-logo-section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+  background:#fff;
+  border-radius:10px;
+  background: white;
+}
+
+/* TEXT */
+.c03-logo-text{
+  font-size:20px;
+  font-weight:600;
+  color:#0b1c4d;
+  margin-bottom:20px;
+
+}
+
+.c03-logo-text span{
+  color:#4f6df5;
+}
+
+/* SLIDER */
+.c03-slider{
+  overflow:hidden;
+  position:relative;
+}
+
+/* TRACK */
+.c03-slide-track{
+  display:flex;
+  width:calc(200px * 10);
+  animation:c03-scroll 15s linear infinite;
+}
+
+/* LOGO */
+.c03-slide{
+  width:200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.c03-slide img{
+  height:50px;
+  opacity: 0.9;
+  /* transition:0.0s; */
+}
+
+.c03-slide img:hover{
+  opacity:1;
+}
+
+.c03-logo-section-main{
+  background-color:#ffffff;
+}
+/* ANIMATION */
+@keyframes c03-scroll{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(calc(-200px * 5));
+  }
+}
+
+/* COURSE TEXT */
+.c03-course-section{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.c03-course-section h1{
+  font-size:36px;
+  color:#0b1c4d;
+  margin-bottom:20px;
+
+}
+
+.c03-course-section p{
+  max-width:700px;
+  margin:auto;
+  color:#6b7280;
+  line-height:1.6;
+
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+  .c03-logo-text{
+    text-align:center;
+    font-size:18px;
+  }
+
+  .c03-slide{
+    width:150px;
+  }
+
+  .c03-slide-track{
+    width:calc(150px * 10);
+  }
+
+  @keyframes c03-scroll{
+    100%{
+      transform:translateX(calc(-150px * 5));
+    }
+  }
+
+  .c03-course-section h1{
+    font-size:28px;
+
+  }
+}
+
+@media (max-width:480px){
+
+  .c03-slide{
+    width:120px;
+  }
+
+  .c03-slide-track{
+    width:calc(120px * 10);
+  }
+
+  @keyframes c03-scroll{
+    100%{
+      transform:translateX(calc(-120px * 5));
+    }
+  }
+
+  .c03-course-section h1{
+    font-size:24px;
+  }
+}
+
+
+
+
+
+/* CONTAINER */
+.c04-container{
+  width:90%;
+  margin:50px auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:25px;
 }
 
 /* CARD */
-.card-AA{
-    width: 350px;
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card-AA:hover{
-    transform: translateY(-10px);
+.c04-card{
+  background:#fff;
+  border-radius:15px;
+  padding:20px;
+  text-align:center;
+  transition:0.3s ease;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  cursor:pointer;
 }
 
 /* IMAGE */
-.card-AA img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.c04-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
+  transition:0.3s;
 }
 
-/* CONTENT */
-.card-content-AA {
-    padding: 20px;
-}
-
-/* DATE + CATEGORY */
-.meta-AA {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-.meta-AA span {
-    color: #4a5cff;
-    font-weight: bold;
+/* BADGE */
+.c04-badge{
+  display:inline-block;
+  background:#4f46e5;
+  color:#fff;
+  font-size:12px;
+  padding:5px 12px;
+  border-radius:20px;
+  margin-bottom:10px;
 }
 
 /* TITLE */
-.card-AA h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #222;
+.c04-card h3{
+  font-size:18px;
+  margin:10px 0;
+  color:#111827;
 }
 
-/* BUTTON */
-.btn-AA {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #4a5cff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+/* TEXT */
+.c04-card p{
+  font-size:14px;
+  color:#6b7280;
 }
 
 /* HOVER EFFECT */
-.btn-AA:hover {
-    background: #2d3edb;
-    transform: scale(1.05);
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
- /* <!-- page 2-30  end  --> */
-
- /* <!-- page 2-31  START --> */
- .footer-bb {
-    background: #f5f6fb;
-    padding: 60px 80px 20px;
+.c04-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.1);
 }
 
-.container-bb {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.c04-card:hover img{
+  transform:scale(1.05);
 }
 
-.footer-col-bb {
-    width: 18%;
+
+.c04-main{
+  background-color:#ffffff
+}
+/* MOBILE */
+@media(max-width:500px){
+  .c04-card img{
+    height:150px;
+  }
 }
 
-.logo-bb {
-    color: #3b5bdb;
+
+.c05-main{
+  background-color:#ffffff;
 }
 
-.footer-col-bb p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.6;
+
+
+
+
+/* SECTION */
+.c05-section{
+  padding:50px 20px;
+  background:#f5f7fb;
 }
 
-.footer-col-bb ul {
-    list-style: none;
-    padding: 0;
+/* HEADER */
+.c05-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+  margin-right:50px;
 }
 
-.footer-col-bb ul li {
-    margin: 8px 0;
-    cursor: pointer;
-    transition: 0.3s;
+.c05-header h2{
+  font-size:24px;
+  color:#1a2a6c;
 }
 
-.footer-col-bb ul li:hover {
-    color: #3b5bdb;
-    transform: translateX(5px);
+.c05-btn{
+  background:#4c5fd7;
+  color:#fff;
+  padding:10px 15px;
+  border:none;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.3s;
+  width:150px;
+  height:50px;
 }
 
-.social-bb i {
-    margin-right: 10px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
+.c05-btn:hover{
+  background:#d5431b;
 }
 
-.social-bb i:hover {
-    background: #3b5bdb;
-    color: #fff;
+/* GRID */
+.c05-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
 }
 
-.btn-bb {
-    display: block;
-    width: 200px;
-    margin-top: 10px;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    border-radius: 6px;
-    transition: 0.3s;
+/* CARD */
+.c05-card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  transition:0.3s;
 }
 
-.play-bb {
-    background: #5a67d8;
+.c05-card:hover{
+  transform:translateY(-8px);
 }
 
-.app-bb {
-    background: #1a202c;
+/* IMAGE */
+.c05-img{
+  position:relative;
 }
 
-.btn-bb:hover {
-    transform: scale(1.05);
+.c05-img img{
+  width:100%;
+  display:block;
 }
 
-.footer-bottom-bb {
+/* TAG */
+.c05-tag{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#4c5fd7;
+  color:#fff;
+  font-size:12px;
+  padding:5px 8px;
+  border-radius:3px;
+}
+
+/* CONTENT */
+.c05-content{
+  padding:15px;
+  text-align:center;
+}
+
+.c05-stars{
+  color:red;
+  margin-bottom:8px;
+}
+
+.c05-title{
+  font-size:14px;
+  margin-bottom:10px;
+  color:#222;
+}
+
+.c05-info{
+  font-size:12px;
+  color:#666;
+  margin-bottom:10px;
+}
+
+.c05-price{
+  font-size:13px;
+  color:#4c5fd7;
+  font-weight:bold;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .c05-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .c05-container{
+    grid-template-columns:1fr;
+  }
+
+  .c05-header{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+}
+
+
+.c06-hero {
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.c06-content {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.c06-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c06-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.c06-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #4c6ef5;
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.c06-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: -60px;
+  padding: 20px;
+  flex-wrap: wrap;
+  z-index: 3;
+  position: relative;
+}
+
+.c06-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  height: 120px;
+  min-height:120px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.c06-card:hover {
+  transform: translateY(-5px);
+}
+
+.c06-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.c06-card h2 {
+  font-size: 28px;
+  color: #1a1a4b;
+}
+
+.c06-card p {
+  color: #777;
+  font-size: 14px;
+}
+.c06-hero-img{
+  width:100%;
+  height:30%;
+  object-fit:cover;
+
+
+}
+
+/* 📱 Responsive */
+@media (max-width: 992px) {
+  .c06-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .c06-content {
+    height: 250px;
+  }
+
+  .c06-card {
+    width: 100%;
+  }
+
+  .c06-play-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+
+/* Base */
+.c07-hero {
+  padding: 60px 20px;
+  background: #f9f9fb;
+}
+
+.c07-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Left Image Section */
+.c07-left {
+  position: relative;
+  flex: 1;
+}
+
+.c07-main-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.c07-small-img {
+  position: absolute;
+  bottom: -30px;
+  right: 20px;
+  width: 180px;
+  border-radius: 10px;
+}
+
+/* Right Content */
+.c07-right {
+  flex: 1;
+}
+
+.c07-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.c07-text {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.c07-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.c07-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.c07-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: blue;
+}
+
+/* Button */
+.c07-btn {
+  display: inline-block;
+  background: #5a5df0;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.c07-btn:hover {
+  background: #bb6419;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .c07-container {
+    flex-direction: column;
     text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-}
- /* <!-- page 2-31  END --> */
+  }
 
+  .c07-small-img {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .c07-title {
+    font-size: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .c07-title {
+    font-size: 24px;
+  }
+
+  .c07-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.c08-instructors {
+  padding: 60px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.c08-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.c08-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.c08-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.c08-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.c08-card {
+  background: #fff;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  transition: 0.3s;
+}
+
+.c08-card:hover {
+  transform: translateY(-5px);
+}
+
+.c08-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.c08-img-wrap img {
+  width: 100%;
+  display: block;
+}
+
+.c08-social {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4c5cff;
+  padding: 10px 5px;
+  border-radius: 6px;
+}
+
+.c08-social a {
+  display: block;
+  color: #fff;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.c08-name {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.c08-role {
+  color: #777;
+  margin: 5px 0 10px;
+}
+
+.c08-meta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .c08-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .c08-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .c08-title {
+    font-size: 28px;
+  }
+}
+
+.c09-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  background-color:#ffffff;
+}
+
+.c09-card {
+  position: relative;
+  flex: 1 1 48%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.c09-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c09-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 50, 0.5);
+}
+
+.c09-content {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 80%;
+}
+
+.c09-subtitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.c09-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.c09-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.c09-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #5a67d8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.c09-btn:hover {
+  background: #434190;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .c09-card {
+    flex: 1 1 100%;
+    height: 250px;
+  }
+
+  .c09-title {
+    font-size: 24px;
+  }
+
+  .c09-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .c09-content {
+    left: 15px;
+  }
+
+  .c09-title {
+    font-size: 20px;
+  }
+
+  .c09-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+.c10-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e6f0ff, #f5f7fa);
+}
+
+.c10-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.c10-heading {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0a1a44;
+  margin-bottom: 40px;
+}
+
+.c10-wrapper {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.c10-card {
+  flex: 1 1 48%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.c10-quote {
+  font-size: 60px;
+  color: #5a67d8;
+  line-height: 1;
+}
+
+.c10-stars {
+  color: #5a67d8;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.c10-text {
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.c10-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f3eef4;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.c10-user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.c10-user-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0a1a44;
+}
+
+.c10-user-role {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ✅ Tablet */
+@media (max-width: 992px) {
+  .c10-heading {
+    font-size: 32px;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 768px) {
+  .c10-card {
+    flex: 1 1 100%;
+  }
+
+  .c10-heading {
+    font-size: 26px;
+  }
+}
+
+/* ✅ Small Mobile */
+@media (max-width: 480px) {
+  .c10-heading {
+    font-size: 22px;
+  }
+
+  .c10-text {
+    font-size: 14px;
+  }
+}
+
+.d01-blog-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.d01-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.d01-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* GRID LAYOUT */
+.d01-blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.d01-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.d01-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.d01-card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.d01-card-title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.d01-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.d01-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #4a5cff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.d01-blog-section{
+  background-color:#ffffff;
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .d01-blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .d01-blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .d01-title {
+    font-size: 24px;
+  }
+}
+
+
+.d01-footer {
+  background: #f4f5fb;
+  padding: 60px 20px 20px;
+  font-family: sans-serif;
+}
+
+.d01-footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.d01-footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.d01-logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.d01-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.d01-footer-col ul {
+  list-style: none;
+}
+
+.d01-footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.d01-footer-col ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.d01-footer-col ul li a:hover {
+  color: #4a5cff;
+}
+
+.d01-social a {
+  display: inline-block;
+  margin-right: 10px;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.d01-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #4a5cff;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.d01-btn-dark {
+  background: #111;
+}
+
+.d01-footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .d01-footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .d01-footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .d01-footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .d01-footer {
+    text-align: center;
+  }
+}
 
 </style>
-</head>
-
 <body>
 
-<nav class="navbar">
-    <div class="logo">🎓 Eduleb</div>
-
-    <ul class="menu">
-        <li>
-            <a href="#">HOME ▼</a>
-            <div class="dropdown">
-                <a href="#">Home 01</a>
-                <a href="#">Home 02</a>
-            </div>
-        </li>
-
-        <li><a href="#">ABOUT</a></li>
-
-        <li>
-            <a href="#">COURSE ▼</a>
-            <div class="dropdown">
-                <a href="#">Course</a>
-                <a href="#">Course Details</a>
-            </div>
-        </li>
-<li> <a href="#">PAGES ▼</a> <div class="dropdown"> <a href="#">Instructor</a> 
-    <a href="#">Instructor Details</a> 
-    <a href="#">Pricing Plan</a>
-     <a href="#">Faq Page</a>
-     <a href="#">404</a> </div> </li>
-        <li><a href="#">BLOG</a></li>
-    </ul>
 
 
+<header>
+  <div class="container">
+     
+   
+ <div class="logo-img"> <img src="./catalystprogrammers-logo.png" width="90" height="60" >   </div>
+  <div class="logo"> Catalyst  Programmers</div>
 
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
-
-    <div class="right">
-        <a href="#" class="login">LOG IN</a>
+    <nav>
+     
+      <ul class="menu">
+        <li class="dropdown">
+          <a href="#" >Home ▾</a>
         
+          <ul class="dropdown-menu">
+            <li><a href="#">Home 01</a></li>
+            <li><a href="#">Home 02</a></li>
+          </ul>
+        </li>
+
+       
+
+        <li class="dropdown">
+          <a href="#">Course ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Course 01</a></li>
+            <li><a href="#">Course 02</a></li>
+          </ul>
+        </li>
+
+       <li class="dropdown">
+  <a href="#">Pages ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Instructor</a></li>
+    <li><a href="#">Instructor Details</a></li>
+    <li><a href="#">Pricing Plan</a></li>
+    <li><a href="#">Faq Page</a></li>
+    <li><a href="#">404</a></li>
+  </ul>
+</li>
+
+<li class="dropdown">
+  <a href="#">Blog ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Blog Details</a></li>
+  </ul>
+</li>
+        <li><a class="text-01" href="#" >Contact</a></li>
+         <li><a  class="text-01" href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="auth">
+      <a href="#" class="btn" >LOG In</a>
+      <a href="#" class="btn">Sign Up</a>
     </div>
-    <DIV CLASS="signup-blue">SIGN UP</DIV>
-</nav>
 
-<!-- SECTION -->
-<div class="sections">
+  </div>
+</header>
 
-    <div class="hero">
-        <div class="content">
-            <h1>
-                <span>Smart Study</span><br>
-                Where <br>Knowledge Meets<br> the Web
-            </h1>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-                Lorem ipsum dolor sit amet,  adipisicing elit,<br>
-                 consectetur adipiscing elit tempor ut labore
-            </p>
-
-           <div class="search-box"> 
-            <input type="text" placeholder="Search Your Course Here"> 
-            <button> Search
-                 <span>✈️</span> </button>
-         </div>
-
-        </div>
+<section class="hero02">
+  <div class="container02">
+    
+    <div class="hero-left02">
+      <img src="./uniq1.png" alt="Instructor">
     </div>
 
-    <div class="sec2-content1">
-        <img  class="small-img22"  src="./download.png" alt="">
+    <div class="hero-right02">
+      <h1>
+        Explore Our <span>14000+</span><br>
+        Online courses for all
+      </h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        consectetur adipiscing elit tempor ut labore
+      </p>
+
+      <div class="hero-search02">
+        <input type="text" placeholder="Search Your Course Here">
+        <button>Search ➤</button>
+      </div>
+
+      <div class="topics02">
+        Popular Topic:
+        <a href="#">Design</a>,
+        <a href="#">Development</a>,
+        <a href="#">Graphics</a>,
+        <a href="#">Marketing</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOGO SECTION -->
+ <DIV CLASS="c03-logo-section-main">
+<div class="c03-logo-section">
+
+  <div class="c03-logo-text">
+  <CENTER>  Helping <span>86,000+</span> global<br> companies take the gloves off    </CENTER>        
+  </div>
+
+  <div class="c03-slider">
+    <div class="c03-slide-track">
+
+      <!-- LOGOS (duplicate for smooth loop) -->
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Diamond"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Rixdot"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Eight"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Rel"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Brand"></div>
+
+      <!-- DUPLICATE -->
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Diamond"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Rixdot"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Eight"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Rel"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Brand"></div>
 
     </div>
+  </div>
+
+</div>
+
+<!-- COURSE SECTION -->
+<div class="c03-course-section">
+  <h1>Popular Courses by category</h1>
+  <p>
+  We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of 
+  learning options and gain new skills! Our school is know.
+  </p>
+</div>
+
+
+</DIV>
+
+
+
+
+<div class="c04-main ">
+<div class="c04-container">
+
+  <div class="c04-card">
+    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
+    <span class="c04-badge">02 COURSES</span>
+    <h3>Digital Marketing</h3>
+    <p>We offer a brand new approach to the most basic learning paradigms.</p>
+  </div>
+
+  <div class="c04-card">
+    <img src="https://images.unsplash.com/photo-1584697964403-7eec9b2d1b90">
+    <span class="c04-badge">04 COURSES</span>
+    <h3>UI/UX Design</h3>
+    <p>We offer a brand new approach to the most basic learning paradigms.</p>
+  </div>
+
+  <div class="c04-card">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+    <span class="c04-badge">01 COURSES</span>
+    <h3>Content Marketing</h3>
+    <p>We offer a brand new approach to the most basic learning paradigms.</p>
+  </div>
+
+  <div class="c04-card">
+    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+    <span class="c04-badge">05 COURSES</span>
+    <h3>Photo Lifestyle</h3>
+    <p>We offer a brand new approach to the most basic learning paradigms.</p>
+  </div>
+
+  <div class="c04-card">
+    <img src="https://images.unsplash.com/photo-1520975922323-4b63c3c9f9a0">
+    <span class="c04-badge">03 COURSES</span>
+    <h3>Graphic Design</h3>
+    <p>We offer a brand new approach to the most basic learning paradigms.</p>
+  </div>
+
+  <div class="c04-card">
+    <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d3c">
+    <span class="c04-badge">04 COURSES</span>
+    <h3>Interior Design</h3>
+    <p>We offer a brand new approach to the most basic learning paradigms.</p>
+  </div>
+
+  <div class="c04-card">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+    <span class="c04-badge">02 COURSES</span>
+    <h3>Arts & Design</h3>
+    <p>We offer a brand new approach to the most basic learning paradigms.</p>
+  </div>
+
+  <div class="c04-card">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+    <span class="c04-badge">01 COURSES</span>
+    <h3>Visual Design</h3>
+    <p>We offer a brand new approach to the most basic learning paradigms.</p>
+  </div>
+
+</div>
 
 </div>
 
 
-<div class="stats-container">
+
+
+<div class="c05-main">
+
+
+  <div class="c05-header">
+    <h1>Join with more than 80,000+<br>
+Courses & Learning creators.</h1>
+    
+    <button class="c05-btn">View All Courses →</button>
+  </div>
+
+  <div class="c05-container">
+
+    <!-- CARD 1 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="https://picsum.photos/400/250?1">
+        <span class="c05-tag">Beginner</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete user fundamentals beginners to advanced</div>
+        <div class="c05-info">12 Course • 2h 32 Min</div>
+        <div class="c05-price">Course Fee - 999</div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="https://picsum.photos/400/250?2">
+        <span class="c05-tag">UI/UX</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Advanced Android 12 & Kotlin Development Course</div>
+        <div class="c05-info">12 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 499</div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="https://picsum.photos/400/250?3">
+        <span class="c05-tag">Web</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete HTML, CSS and Javascript Course</div>
+        <div class="c05-info">32 Course • 7h 32 Min</div>
+        <div class="c05-price">Course Fee - Free</div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="https://picsum.photos/400/250?4">
+        <span class="c05-tag">iOS</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">IOS and Swift Complete iOS Application Development</div>
+        <div class="c05-info">12 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 699</div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="https://picsum.photos/400/250?5">
+        <span class="c05-tag">Design</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Learn graphics design with best IT Trainer</div>
+        <div class="c05-info">22 Course • 2h 32 Min</div>
+        <div class="c05-price">Course Fee - 799</div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="https://picsum.photos/400/250?6">
+        <span class="c05-tag">Business</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete data science for your next business</div>
+        <div class="c05-info">11 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 399</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="c06-hero">
+  <div class="c06-overlay"></div>
+
+  <div class="c06-content">
+    <img src="./Complete DSA Course.jfif" alt="hero" class="c06-bg">
+
+    <div class="c06-play-btn">
+    <a href="./video.html">▶</a> 
+    </div>
+
+    
+  </div>
+
+  <div class="c06-stats">
+    <div class="c06-card">
+      <div class="c06-icon">📁</div>
+      <h2>134</h2>
+      <p>Our Online Course</p>
+    </div>
+
+    <div class="c06-card">
+      <div class="c06-icon">📍</div>
+      <h2>299</h2>
+      <p>Academic Programs</p>
+    </div>
+
+    <div class="c06-card">
+      <div class="c06-icon">🪪</div>
+      <h2>684</h2>
+      <p>Certified Students</p>
+    </div>
+
+    <div class="c06-card">
+      <div class="c06-icon">👤</div>
+      <h2>941</h2>
+      <p>Enrolled Students</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="c07-hero">
+  <div class="c07-container">
+    
+    <div class="c07-left">
+      <img src="./uniq2.png" alt="student" class="c07-main-img">
+      <!-- <img src="./uniq2.png" alt="child" class="c07-small-img"> -->
+    </div>
+
+    <div class="c07-right">
+      <h1 class="c07-title">
+        We Are Providing The Online Course In Global World
+      </h1>
+
+      <p class="c07-text">
+        We offer a brand new approach to the most basic learning paradigms.
+        Choose from a wide range of learning options and gain new skills!
+      </p>
+
+      <ul class="c07-list">
+        <li>Get access to 12,000+ of our top courses</li>
+        <li>Popular topic to learn now in our online courses</li>
+        <li>Find the right instructor for you</li>
+      </ul>
+
+      <a href="#" class="c07-btn">View All Courses →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="c08-instructors">
+  <div class="c08-container">
+    <h2 class="c08-title">Meet our Instructors</h2>
+    <p class="c08-subtitle">
+      We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of <br>
+      learning options and gain new skills! Our school is know.
+    </p>
+
+    <div class="c08-grid">
+      
+      <!-- Card 1 -->
+      <div class="c08-card">
+        <div class="c08-img-wrap">
+          <img src="./Advanced Android 12 & Kotlin Development Course.webp" alt="">
+          <div class="c08-social">
+            <a href="#">×</a>
+            <a href="#">f</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+        <h3 class="c08-name">Bilkis Vabi</h3>
+        <p class="c08-role">Web designer</p>
+        <div class="c08-meta">
+          <span>04 Course</span>
+          <span>27 Student</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="c08-card">
+        <div class="c08-img-wrap">
+          <img src="./Advanced Android 12 & Kotlin Development Course.webp" alt="">
+          <div class="c08-social">
+            <a href="#">×</a>
+            <a href="#">f</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+        <h3 class="c08-name">Mood Wasim</h3>
+        <p class="c08-role">TemplateMonster company</p>
+        <div class="c08-meta">
+          <span>06 Course</span>
+          <span>41 Student</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="c08-card">
+        <div class="c08-img-wrap">
+          <img src="./Advanced Android 12 & Kotlin Development Course.webp" alt="">
+          <div class="c08-social">
+            <a href="#">×</a>
+            <a href="#">f</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+        <h3 class="c08-name">Shyinn tim</h3>
+        <p class="c08-role">Codecanyou</p>
+        <div class="c08-meta">
+          <span>13 Course</span>
+          <span>31 Student</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="c08-card">
+        <div class="c08-img-wrap">
+          <img src="./Advanced Android 12 & Kotlin Development Course.webp" alt="">
+          <div class="c08-social">
+            <a href="#">×</a>
+            <a href="#">f</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+        <h3 class="c08-name">Shorif shorifa</h3>
+        <p class="c08-role">Tsc chottor</p>
+        <div class="c08-meta">
+          <span>07 Course</span>
+          <span>24 Student</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="c09-container">
   <!-- Card 1 -->
-  <div class="stat-card">
-    <div class="icon-circle red-bg">📁</div>
-    <div class="stat-info">
-      <span class="stat-number">134</span>
-      <span class="stat-label">Our Online Course</span>
+  <div class="c09-card">
+    <img src="./Advanced Android 12 & Kotlin Development Course.webp" alt="Instructor" class="c09-bg">
+    <div class="c09-overlay"></div>
+    <div class="c09-content">
+      <p class="c09-subtitle">Build Your Career</p>
+      <h2 class="c09-title">Become an Instructor</h2>
+      <p class="c09-text">
+        Learn at your own pace, move the between multiple courses.
+      </p>
+      <a href="#" class="c09-btn">Apply now →</a>
     </div>
   </div>
 
   <!-- Card 2 -->
-  <div class="stat-card">
-    <div class="icon-circle blue-bg">🎓</div>
-    <div class="stat-info">
-      <span class="stat-number">299</span>
-      <span class="stat-label">Academic Programs</span>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="stat-card">
-    <div class="icon-circle purple-bg">📋</div>
-    <div class="stat-info">
-      <span class="stat-number">684</span>
-      <span class="stat-label">Certified Students</span>
-    </div>
-  </div>
-
-
-
-  <!-- Card 4-->
-  <div class="stat-card">
-    <div class="icon-circle cyan-bg">👤</div>
-    <div class="stat-info">
-      <span class="stat-number">941</span>
-      <span class="stat-label">Enrolled Students</span>
-    </div>
-  </div>
-
-</div>
-<br>
-<br>
-<br>
-<br>
-<!--  page 2nd  -->
-<div class="header">
-    <h1>.Start your journey With us.</h1>
-    <p>
-        We offer a brand new approach to the most basic learning paradigms.
-        Choose from a wide range of learning options and gain new skills!
-        Our school is know.
-    </p>
-</div>
-
-<div class="container">
-
-    <div class="card">
-        <div class="circle c1">01</div>
-        <h3>Expert Teacher</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
-    </div>
-
-    <div class="card">
-        <div class="circle c2">02</div>
-        <h3>Quality Education</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
-    </div>
-
-    <div class="card">
-        <div class="circle c3">03</div>
-        <h3>Remote Learning</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
-    </div>
-
-    <div class="card">
-        <div class="circle c4">04</div>
-        <h3>Life Time Support</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
-    </div>
-
-
-<!-- page 4  -->
-<!-- page 4  -->
-<div class="hero">
-  <div class="hero-container">
-
-    <!-- Left Image -->
-    <div class="hero-image">
-      <img src="./education-concept-smiling-brunette-girl-student-casual-clothes-holds-her-books-study-material.jpg" alt="Student">
-      <div class="circle red">
-         <div class="circle blue"></div>
-      </div>
-      <!-- <div class="circle blue"></div> -->
-
-      <!-- Small image -->
-      <div class="small-img">
-        <img src="./front-view-young-beautiful-lady-red-t-shirt-black-jeans-holding-different-copybooks-files-smiling-with-bag-white.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- Right Content --> 
-    <div class="hero-content">
-      <h1>We Are Providing The Online <br>Course In Global World</h1>
-<br>
-      <p>
-      We offer a brand new approach to the most basic learning paradigms.<br>
-      Choose from a wide range of learning options and gain new skills! <br>
-      Our school is know.<br>
+  <div class="c09-card">
+    <img src="./Advanced Android 12 & Kotlin Development Course.webp" alt="Courses" class="c09-bg">
+    <div class="c09-overlay"></div>
+    <div class="c09-content">
+      <p class="c09-subtitle">Build Your Career</p>
+      <h2 class="c09-title">Get Free Courses</h2>
+      <p class="c09-text">
+        Learn at your own pace, move the between multiple courses.
       </p>
-
-       <p>
-      We offer a brand new approach to the most basic learning paradigms.<br>
-      Choose from a wide range of learning options and gain new skills! <br>
-      Our school is know.<br>
-      </p>
-
-      <ul>
-      <li>Get access to 12,000+ of our top courses</li><br>
-      <li>Popular topic to learn now in our online courses</li><br>
-      <li>Find the right instructor for you</li><br>
-      </ul>
-<br>
-      <a href="#" class="btn">View All Courses →</a>
+      <a href="#" class="c09-btn">Contact now →</a>
     </div>
-
   </div>
 </div>
 
-<section class="categories">
- <br><br><br><br><br><br><br><br><br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-
-  <DIV CLASS="PAGE4">
-    <center>
- <h1>Find Out by Popular Categories</h1><br></center>
-<center><p>
-We offer a brand-new approach to the most essential learning methods.<br>
-Choose from a wide range of learning options and gain new skills.<br>
-Our school is known for quality education and practical learning.<br>
-</p> </center>
-<center>
-   <div class="category-container">
-    <div class="category">📊 Digital Marketing</div>
-    <div class="category">💡 UI/UX Design</div>
-    <div class="category">🧱 3D Visual Design</div>
-    <div class="category">📕 Content Marketing</div><br>
-    <div class="category">📷 Photography</div><br>
-
-    <div class="category">📸 Photo Lifestyle</div>
-    <div class="category">🎨 Art & Design</div>
-    <div class="category">💰 Finance & Banking</div>
-    <div class="category">🖌️ Graphic Design</div><br>
-    <div class="category">🏠 Interior Design</div><br>
-
+<section class="c10-section">
+  <div class="c10-container">
     
-    <div class="category">🧱 3D Visual Design</div>
-    <div class="category">🎨 Art & Design</div>
-  </div></center>
-</section>
-</DIV> 
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="cta-section">
-  <div class="cta-container">
-    
-    <h2>
-      Join with more than 
-      <span>80,000+</span><br>
-      Courses & Learning creators.
+    <h2 class="c10-heading">
+      What Student’s Say To Do <br> Their Online Course
     </h2>
 
-    <a href="#" class="cta-btn">
-      View all Courses →
-    </a>
+    <div class="c10-wrapper">
+      
+      <!-- Card 1 -->
+      <div class="c10-card">
+        <div class="c10-quote">“</div>
 
+        <div class="c10-stars">★★★★★</div>
+
+        <p class="c10-text">
+          Aqestic optio amet a ququam saepe aliquid voluptate dicta fuga dolor 
+          saerror sed earum a magni soluta quam minus dolor dolor sed earum 
+          a magni soluta autem dolor error error sit quam minus sint rem a 
+          rerum dolobus veritatis delectus.
+        </p>
+
+        <div class="c10-user">
+          <img src="./Advanced Android 12 & Kotlin Development Course.webp" class="c10-user-img" alt="Ajmain Adil">
+          <div>
+            <h4 class="c10-user-name">Ajmain Adil</h4>
+            <p class="c10-user-role">Groton Inc</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="c10-card">
+        <div class="c10-quote">“</div>
+
+        <div class="c10-stars">★★★★★</div>
+
+        <p class="c10-text">
+          Aqestic optio amet a ququam saepe aliquid voluptate dicta fuga dolor 
+          saerror sed earum a magni soluta quam minus dolor dolor sed earum 
+          a magni soluta autem dolor error error sit quam minus sint rem a 
+          rerum dolobus veritatis delectus.
+        </p>
+
+        <div class="c10-user">
+          <img src="./Advanced Android 12 & Kotlin Development Course.webp" class="c10-user-img" alt="">
+          <div>
+            <h4 class="c10-user-name">Sharukh Khan</h4>
+            <p class="c10-user-role">Red Chili Inc</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<!-- pages 6-22 -->
- 
-
-<div class="container22">
-<div class="grid22">
-
-  <div class="card22">
-<img src="https://picsum.photos/400/300?1">
-<div class="body22">
-<div class="stars22">★★★★★</div>
-<div class="title22">Complete User fundamentals beginners to advanced</div>
-
-<div class="meta22">
-<span>12 Course</span>
-<span>2 Hrs 32 Min</span>
-</div>
-
-<div class="price22">Course Fee - 99$</div>
-</div>
-</div>
-
-<div class="card22">
-<img src="https://picsum.photos/400/300?2">
-<div class="body22">
-<div class="stars22">★★★★★</div>
-<div class="title22">Advanced Android 12 & Kotlin Development Course</div>
-
-<div class="meta22">
-<span>41 Course</span>
-<span>3 Hrs 32 Min</span>
-</div>
-
-<div class="price22">Course Fee - 49$</div>
-</div>
-</div>
-
-<div class="card22">
-<img src="https://picsum.photos/400/300?3">
-<div class="body22">
-<div class="stars22">★★★★★</div>
-<div class="title22">Complete HTML, CSS and Javascript Course</div>
-
-<div class="meta22">
-<span>32 Course</span>
-<span>2 Hrs 32 Min</span>
-</div>
-
-<div class="price22">Course Fee - Free</div>
-</div>
-</div>
-
-
-<div class="card22">
-<img src="https://picsum.photos/400/300?1">
-<div class="body22">
-<div class="stars22">★★★★★</div>
-<div class="title22">Complete User fundamentals beginners to advanced</div>
-
-<div class="meta22">
-<span>12 Course</span>
-<span>2 Hrs 32 Min</span>
-</div>
-
-<div class="price22">Course Fee - 99$</div>
-</div>
-</div>
-
-<div class="card22">
-<img src="https://picsum.photos/400/300?2">
-<div class="body22">
-<div class="stars22">★★★★★</div>
-<div class="title22">Advanced Android 12 & Kotlin Development Course</div>
-
-<div class="meta22">
-<span>41 Course</span>
-<span>3 Hrs 32 Min</span>
-</div>
-
-<div class="price22">Course Fee - 49$</div>
-</div>
-</div>
-
-<div class="card22">
-<img src="https://picsum.photos/400/300?3">
-<div class="body22">
-<div class="stars22">★★★★★</div>
-<div class="title22">Complete HTML, CSS and Javascript Course</div>
-
-<div class="meta22">
-<span>32 Course</span>
-<span>2 Hrs 32 Min</span>
-</div>
-
-<div class="price22">Course Fee - Free</div>
-</div>
-</div>
-
-</div>
-</div>
-<!-- pages 6-22  -->
-
-
-
-
-<!-- page 6-23 start  -->
- <div class="section">
-    <div class="section-content">
-
-        <!-- Left Text -->
-        <div class="text">
-            Helping <span>86,000+</span> global <br>
-            companies take the gloves off
-        </div>
-
-        <!-- Logos -->
-        <div class="logos">
-            <img src="logo1.png" alt="Diamond">
-            <img src="logo2.png" alt="Rixdot">
-            <img src="logo3.png" alt="Eight Roles">
-            <img src="logo4.png" alt="Reload">
-        </div>
-
-    </div>
-</div>
-
-<!-- page 2-23 end  -->
-
-
-
-
-
-
-
-
-<!-- page 2-24 start  -->
-
-
-
-
-
- <div class="video-section">
-<video 
-    src="./videoplayback (3).mp4"
-    controls
-    autoplay
-    muted
-    loop
-    width="1100vw"
-    height="500vh"
-   ></video>
-</div>
-
-
-<!-- page 2-24 end   -->
-
-<!-- page 2-25 start  -->
- <section class="instructors">
-    <h2>Meet our Instructors</h2>
-    <p>
-        We offer a brand new approach to the most basic learning paradigms.
-        Choose from a wide range of learning options and gain new skills!
-        Our school is known for its innovative teaching methods.
-    </p>
 </section>
-<!-- page 2-25 end  -->
 
-<!-- page 2-26 start  -->
- <section class="team-section">
 
-<div class="team-container">
+<section class="d01-blog-section">
+  <h2 class="d01-title">Latest Blog & News</h2>
+  <p class="d01-subtitle">
+   We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of<br>
+    learning options and gain new skills! Our school is know.
+  </p>
 
-    <!-- Card 1 -->
-    <div class="team-card">
-        <div class="team-img">
-            <img src="https://randomuser.me/api/portraits/women/44.jpg">
-           <div class="team-social">
-    <a href="#" class="icon close"><i class="fa fa-times"></i></a>
-    <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
-</div>
-        </div>
-        <div class="team-content">
-            <h3>Bilkis Vabi</h3>
-            <p>Web designer</p>
-        </div>
-        <div class="team-info">
-            <span><i class="fa fa-file"></i> 04 Course</span>
-            <span><i class="fa fa-user"></i> 27 Student</span>
-        </div>
+  <div class="d01-blog-container">
+
+    <div class="d01-card">
+      <img src="./Advanced Android 12 & Kotlin Development Course.webp" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 10, 2024 | Education</p>
+        <h3 class="d01-card-title">Professional Mobile Painting</h3>
+        <button class="d01-btn">Read More</button>
+      </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="team-card">
-        <div class="team-img">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg">
-            <div class="team-social">
-    <a href="#" class="icon close"><i class="fa fa-times"></i></a>
-    <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
-</div>
-        </div>
-        <div class="team-content">
-            <h3>Mood Wasim</h3>
-            <p>TemplateMonster company</p>
-        </div>
-        <div class="team-info">
-            <span><i class="fa fa-file"></i> 06 Course</span>
-            <span><i class="fa fa-user"></i> 41 Student</span>
-        </div>
+    <div class="d01-card">
+      <img src="./Advanced Android 12 & Kotlin Development Course.webp" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 16, 2024 | Education</p>
+        <h3 class="d01-card-title">Ceramic Moulding</h3>
+        <button class="d01-btn">Read More</button>
+      </div>
     </div>
 
-    <!-- Card 3 -->
-    <div class="team-card">
-        <div class="team-img">
-            <img src="https://randomuser.me/api/portraits/women/65.jpg">
-            <div class="team-social">
-    <a href="#" class="icon close"><i class="fa fa-times"></i></a>
-    <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
-</div>
-        </div>
-        <div class="team-content">
-            <h3>Shyinn tim</h3>
-            <p>Codecanyou</p>
-        </div>
-        <div class="team-info">
-            <span><i class="fa fa-file"></i> 13 Course</span>
-            <span><i class="fa fa-user"></i> 31 Student</span>
-        </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="team-card">
-        <div class="team-img">
-            <img src="https://randomuser.me/api/portraits/men/76.jpg">
-            <div class="team-social">
-    <a href="#" class="icon close"><i class="fa fa-times"></i></a>
-    <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
-</div>
-        </div>
-        <div class="team-content">
-            <h3>Shorif shorifa</h3>
-            <p>Tsc chottor</p>
-        </div>
-        <div class="team-info">
-            <span><i class="fa fa-file"></i> 07 Course</span>
-            <span><i class="fa fa-user"></i> 24 Student</span>
-        </div>
-    </div>
-
-</div>
-
-</section>
-<!-- page 2-26 end -->
-
-
-
-
-
-<!-- page 2-27 start  -->
- <div class="choose-1">
-  <div class="container-1">
-    
-    <!-- LEFT CONTENT  -->
-    <div class="content-1">
-      <h1>Why Choose Us For Your Online Education Courses</h1>
-
-      <p>
-        We offer a brand new approach to the most basic learning paradigms.
-        Choose from a wide range of learning options and gain new skills!
-      </p>
-
-      <p>
-        We offer a brand new approach to the most basic learning paradigms.
-        Choose from a wide range of learning options and gain new skills!
-      </p>
-
-      <ul>
-        <li>Get access to 12,000+ of our top courses</li>
-        <li>Popular topic to learn now in our online courses for student</li>
-        <li>Find the right instructor for you</li>
-      </ul>
-
-      <a href="#" class="btn-1">View All Courses →</a>
-    </div>
-
-     <!-- RIGHT IMAGE  -->
-    <div class="image-box-1">
-      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="person"/>
-
-      <div class="badge-1">
-        <span>📘</span>
-        <div>
-          <h3>3300+</h3>
-          <p>Online Course</p>
-        </div>
+    <div class="d01-card">
+      <img src="./Advanced Android 12 & Kotlin Development Course.webp" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 18, 2024 | Programing</p>
+        <h3 class="d01-card-title">Education Leaders</h3>
+        <button class="d01-btn">Read More</button>
       </div>
     </div>
 
   </div>
-</div>
-
-<!-- page 2-27 end  -->
-
-
-
-
-
-
-
-
-
-
-<!-- page 2-28 start  -->
- <div class="hero">
-  <div class="hero-container">
-
-    <!-- Left Image -->
-    <div class="hero-image">
-      <img src="./education-concept-smiling-brunette-girl-student-casual-clothes-holds-her-books-study-material.jpg" alt="Student">
-      <div class="circle red">
-         <div class="circle blue"></div>
-      </div>
-      <!-- <div class="circle blue"></div> -->
-
-      <!-- Small image -->
-      <div class="small-img">
-        <img src="./front-view-young-beautiful-lady-red-t-shirt-black-jeans-holding-different-copybooks-files-smiling-with-bag-white.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- Right Content --> 
-    <div class="hero-content">
-      <h1>We Are Providing The Online <br>Course In Global World</h1>
-<br>
-      <p>
-      We offer a brand new approach to the most basic learning paradigms.<br>
-      Choose from a wide range of learning options and gain new skills! <br>
-      Our school is know.<br>
-      </p>
-
-       <p>
-      We offer a brand new approach to the most basic learning paradigms.<br>
-      Choose from a wide range of learning options and gain new skills! <br>
-      Our school is know.<br>
-      </p>
-
-      <ul>
-      <li>Get access to 12,000+ of our top courses</li><br>
-      <li>Popular topic to learn now in our online courses</li><br>
-      <li>Find the right instructor for you</li><br>
-      </ul>
-<br>
-      <a href="#" class="btn">View All Courses →</a>
-    </div>
-
-  </div>
-</div>
-
- <!-- page 2-28 end  -->
-
- <!-- page 2-29 start -->
-  <section class="blog-section">
-    <h1>Latest Blog & news</h1>
-    <p>
-        We offer a brand new approach to the most basic learning paradigms.
-        Choose from a wide range of learning options and gain new skills!
-        Our school is know.
-    </p>
 </section>
- <!-- page 2-29 end -->
-
-<!-- page 2-30 start -->
- <div class="container-AA">
-
-    <!-- CARD 1 -->
-    <div class="card-AA">
-        <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f" alt="">
-        <div class="card-content-AA">
-            <div class="meta-AA">May 10, 2024 | <span>Education</span></div>
-            <h3>Professional Mobile Painting and Sculpting</h3>
-            <a href="#" class="btn-AA">Read More →</a>
-        </div>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="card-AA">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
-        <div class="card-content-AA">
-            <div class="meta-AA">May 16, 2024 | <span>Education</span></div>
-            <h3>Professional Ceramic Moulding for Beginner</h3>
-            <a href="#" class="btn-AA">Read More →</a>
-        </div>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="card-AA">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
-        <div class="card-content-AA">
-            <div class="meta-AA">May 18, 2024 | <span>Programing</span></div>
-            <h3>Education Is About Create Leaders For Tomorrow</h3>
-            <a href="#" class="btn-AA">Read More →</a>
-        </div>
-    </div>
-
-</div>
-
- <!-- page 2-30  end  -->
 
 
 
 
-
-
- <!-- page 2-31  START -->
-<footer class="footer-bb">
-
-  <div class="container-bb">
+<footer class="d01-footer">
+  <div class="d01-footer-container">
 
     <!-- Column 1 -->
-    <div class="footer-col-bb">
-      <h2 class="logo-bb"><i class="fa-solid fa-graduation-cap"></i> Eduleb</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis dignissim.</p>
+    <div class="d01-footer-col">
+      <h2 class="d01-logo">🎓 Eduleb</h2>
+      <p class="d01-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
 
-      <div class="social-bb">
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-linkedin-in"></i>
+      <div class="d01-social">
+        <a href="#">X</a>
+        <a href="./facebook.png">F</a>
+        <a href="#">I</a>
+        <a href="#">L</a>
       </div>
     </div>
 
     <!-- Column 2 -->
-    <div class="footer-col-bb">
-      <h3>About Eduleb</h3>
+    <div class="d01-footer-col">
+      <h3>About catyalast</h3>
       <ul>
-        <li>About Us</li>
-        <li>Instructor Registration</li>
-        <li>Become A Teacher</li>
-        <li>All Instructors</li>
-        <li>Asked Question</li>
-        <li>Contact Us</li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Instructor Registration</a></li>
+        <li><a href="#">Become A Teacher</a></li>
+        <li><a href="#">All Instructors</a></li>
+        <li><a href="#">Asked Question</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
     </div>
 
     <!-- Column 3 -->
-    <div class="footer-col-bb">
+    <div class="d01-footer-col">
       <h3>Popular Course</h3>
       <ul>
-        <li>Development</li>
-        <li>Arts & Design</li>
-        <li>Visual Design</li>
-        <li>Graphic Design</li>
-        <li>Code Inspection</li>
-        <li>Digital Marketing</li>
+        <li><a href="#">Development</a></li>
+        <li><a href="#">Arts & Design</a></li>
+        <li><a href="#">Visual Design</a></li>
+        <li><a href="#">Graphic Design</a></li>
+        <li><a href="#">Code Inspection</a></li>
+        <li><a href="#">Digital Marketing</a></li>
       </ul>
     </div>
 
     <!-- Column 4 -->
-    <div class="footer-col-bb">
+    <div class="d01-footer-col">
       <h3>Contact Info</h3>
-
-      <p><i class="fa-solid fa-location-dot"></i> 2570 Quadra Street Victoria Road, New York, Canada</p>
-      <p><i class="fa-solid fa-phone"></i> +88 457 845 695</p>
-      <p><i class="fa-brands fa-whatsapp"></i> Contact Whatsapp</p>
-      <p><i class="fa-solid fa-envelope"></i> example@yourmail.com</p>
+      <p>📍 2570 Quadra Street Victoria Road, 
+        New York, Canada</p><br>
+      <p>📞 +88 457 845 695</p><br>
+      <p>✉ example@yourmail.com</p><br>
     </div>
 
     <!-- Column 5 -->
-    <div class="footer-col-bb">
+    <div class="d01-footer-col">
       <h3>Download App</h3>
-      <p>Download our app from app store and google play store.</p>
+      <p>Download our app from play store</p>
 
-      <button class="btn-bb play-bb">Download on Google Play</button>
-      <button class="btn-bb app-bb">Download on App Store</button>
+      <button class="d01-btn">Google Play</button>
+      <button class="d01-btn d01-btn-dark">App Store</button>
     </div>
 
   </div>
 
-  <!-- Bottom -->
-  <div class="footer-bottom-bb">
-    © 2024. All Rights Reserved by <b>Bestwpware</b> • Distributed by <b>ThemeWagon</b>
+  <div class="d01-footer-bottom">
+    <p>© 2024 All Rights Reserved</p>
   </div>
-
 </footer>
- <!-- page 2-31  END -->
+
 
 
 </body>
-</html>     
+</html>
