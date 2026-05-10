@@ -1,0 +1,2604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduleb Navbar virat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#f5f5f5;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 8%;
+  background: #fff;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #0a0a23;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background: linear-gradient(135deg, #5a67d8, #6b73ff);
+  border-radius: 12px;
+  padding: 15px 0;
+  width: 220px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* DESKTOP HOVER */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ITEMS */
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 22px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* AUTH */
+.auth a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #5a67d8;
+  font-weight: 500;
+}
+
+.auth .btn {
+  background: #5a67d8;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+}
+
+/* MOBILE TOGGLE */
+#menu-check {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    transition: 0.3s;
+  }
+
+  /* OPEN MENU */
+  #menu-check:checked ~ .menu {
+    left: 0;
+  }
+
+  .menu li {
+    padding: 12px 20px;
+  }
+
+  /* DROPDOWN MOBILE */
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background: #f3f4ff;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  /* OPEN DROPDOWN */
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+
+  .auth {
+    display: none;
+  }
+}
+
+/* HERO */
+.c-01-hero{
+  background: linear-gradient(90deg,#f3e7d9,#d4d9f7);
+  padding:80px 20px 120px;
+  position:relative;
+}
+
+.c-01-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+
+/* LEFT */
+.c-01-left h1{
+  font-size:48px;
+  line-height:1.2;
+  color:#111;
+}
+
+.c-01-left h1 span{
+  color:#5a67d8;
+}
+
+.c-01-left p{
+  margin:20px 0;
+  color:#555;
+  max-width:450px;
+}
+
+/* SEARCH */
+.c-01-search{
+  display:flex;
+  max-width:450px;
+  border:1px solid #ddd;
+  background:#fff;
+}
+
+.c-01-search input{
+  flex:1;
+  padding:12px;
+  border:none;
+  outline:none;
+}
+
+.c-01-search button{
+  background:#5a67d8;
+  color:#fff;
+  border:none;
+  padding:12px 20px;
+  cursor:pointer;
+}
+
+/* RIGHT */
+.c-01-right{
+  position:relative;
+  margin-top:50px ;
+}
+
+.c-01-right img{
+  width:350px;
+  max-width:100%;
+}
+
+/* BADGE */
+.c-01-badge{
+  position:absolute;
+  bottom:30px;
+  right:-20px;
+  background:#fff;
+  padding:10px 15px;
+  border-radius:8px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.c-01-badge strong{
+  display:block;
+  color:#111;
+}
+
+.c-01-badge span{
+  font-size:12px;
+  color:#666;
+}
+
+.cards{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  width:250px;
+  background:#fff;
+  border-radius:18px;
+  padding:20px 25px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.icon{
+  width:30px;
+  height:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+}
+
+.icon1{background:#ffeaea; color:#ff5e5e;}
+.icon2{background:#eee9ff; color:#6c63ff;}
+.icon3{background:#fdeeff; color:#c45ddb;}
+.icon4{background:#e8f9ff; color:#4bbbe6;}
+
+.content h2{
+  font-size:30px;
+  color:#001b5e;
+  margin-bottom:-5px;
+}
+
+.content p{
+  color:#444;
+  font-size:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .c-01-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .c-01-left h1{
+    font-size:36px;
+  }
+
+  .c-01-search{
+    margin:auto;
+  }
+
+  .c-01-right img{
+    width:280px;
+  }
+
+  .c-01-badge{
+    right:0;
+  }
+}
+
+@media(max-width:500px){
+
+  .c-01-left h1{
+    font-size:28px;
+  }
+
+  .c-01-box{
+    width:100%;
+  }
+
+}
+
+.c-02-section{
+  width:100%;
+  padding:80px 8%;
+  background:#f8f8f8;
+  /* margin-top: 50px; */
+}
+
+/* TOP */
+
+.c-02-top{
+  text-align:center;
+  margin-bottom:70px;
+  /* margin-top: 50px; */
+
+}
+
+.c-02-top h2{
+  font-size:38px;
+  color:#001b5e;
+  margin-bottom:15px;
+}
+
+.c-02-top p{
+  max-width:700px;
+  margin:auto;
+  color:#666;
+  line-height:1.7;
+}
+
+/* FEATURES */
+
+.c-02-features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:50px;
+}
+
+.c-02-card{
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.c-02-card-top{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:15px;
+}
+
+.c-02-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.c-02-icon1{
+  background:#ffe8e8;
+  color:#ff5d5d;
+}
+
+.c-02-icon2{
+  background:#eee8ff;
+  color:#6a5cff;
+}
+
+.c-02-icon3{
+  background:#ffe8f7;
+  color:#d15cff;
+}
+
+.c-02-icon4{
+  background:#e8f8ff;
+  color:#47b8e8;
+}
+
+.c-02-card h3{
+  font-size:18px;
+  color:#001b5e;
+}
+
+.c-02-card p{
+  color:#666;
+  line-height:1.7;
+  font-size:14px;
+}
+
+/* BOTTOM */
+
+.c-02-bottom{
+  margin-top:100px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+/* IMAGE */
+
+.c-02-image{
+  flex:1 1 450px;
+  position:relative;
+  display:flex;
+  justify-content:center;
+}
+
+.c-02-main-img{
+  width:100%;
+  max-width:420px;
+  border-radius:10px;
+}
+
+.c-02-small-img{
+  position:absolute;
+  right:40px;
+  bottom:-20px;
+  width:140px;
+  border-radius:10px;
+  border:6px solid #fff;
+}
+
+.c-02-circle1{
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:#5c63ff;
+  border-radius:50%;
+  left:20px;
+  top:30px;
+}
+
+.c-02-circle2{
+  position:absolute;
+  width:55px;
+  height:55px;
+  border:5px solid #ff6a61;
+  border-radius:50%;
+  left:0;
+  bottom:10px;
+}
+
+/* CONTENT */
+
+.c-02-content{
+  flex:1 1 500px;
+}
+
+.c-02-content h2{
+  font-size:42px;
+  color:#001b5e;
+  line-height:1.3;
+  margin-bottom:20px;
+}
+
+.c-02-content p{
+  color:#666;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+.c-02-list{
+  list-style:none;
+  margin-top:20px;
+}
+
+.c-02-list li{
+  margin-bottom:14px;
+  color:#001b5e;
+  font-weight:500;
+}
+
+.c-02-btn{
+  display:inline-block;
+  margin-top:25px;
+  background:#5c63ff;
+  color:#fff;
+  text-decoration:none;
+  padding:14px 30px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.c-02-btn:hover{
+  background:#3f46e0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+  .c-02-features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .c-02-content h2{
+    font-size:34px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .c-02-section{
+    padding:60px 5%;
+  }
+
+  .c-02-features{
+    grid-template-columns:1fr;
+  }
+
+  .c-02-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .c-02-content h2{
+    font-size:28px;
+  }
+
+  .c-02-small-img{
+    width:110px;
+    right:10px;
+  }
+
+}
+
+
+.c-03-category-section{
+    width:100%;
+    padding:70px 20px;
+    background:linear-gradient(
+        90deg,
+        #f6ead9 0%,
+        #f6efd8 45%,
+        #e7e7ff 100%
+    );
+}
+
+/* CONTAINER */
+
+.c-03-container{
+    max-width:1650px;
+    margin:auto;
+}
+
+/* FLEX WRAP */
+
+.c-03-category-wrap{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px 20px;
+}
+
+/* CARD */
+
+.c-03-category-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#ffffff;
+    border:1px solid #dcdcdc;
+    border-radius:50px;
+    padding:14px 32px 14px 14px;
+    min-width:0px;
+    transition:0.35s ease;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+}
+
+/* HOVER EFFECT */
+
+.c-03-category-card:hover{
+    background:#4f5be7;
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(79,91,231,0.25);
+}
+
+.c-03-category-card:hover .c-03-category-title{
+    color:#ffffff;
+}
+
+.c-03-category-card:hover .c-03-icon-box{
+    background:#ffffff;
+    transform:scale(1.05);
+}
+
+/* ACTIVE CARD */
+
+.c-03-active{
+    background:#4f5be7;
+    box-shadow:0 12px 25px rgba(79,91,231,0.25);
+}
+
+.c-03-active .c-03-category-title{
+    color:#ffffff;
+}
+
+/* ICON */
+
+.c-03-icon-box{
+    width:60px;
+    height:60px;
+    min-width:60px;
+    border-radius:50%;
+    background:#f2f2ff;
+    border:5px solid #ececec;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.35s ease;
+}
+
+.c-03-icon-box img{
+    width:30px;
+    height:30px;
+    object-fit:contain;
+}
+
+/* TITLE */
+
+.c-03-category-title{
+    font-size:19px;
+    font-weight:500;
+    color:#63638d;
+    transition:0.35s ease;
+    white-space:nowrap;
+}
+
+
+  .c-03-container{
+      max-width:1400px;
+      margin:auto;
+      text-align:center;
+    }
+
+    .c-03-heading{
+      font-size:65px;
+      font-weight:800;
+      color:#0a0d5a;
+      margin-bottom:25px;
+      line-height:1.1;
+    }
+
+    .c-03-description{
+      max-width:900px;
+      margin:0 auto 60px;
+      font-size:20px;
+      line-height:1.8;
+      color:#4a4a4a;
+    }
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .c-03-category-wrap{
+        gap:22px;
+    }
+
+    .c-03-category-card{
+        min-width:260px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .c-03-category-section{
+        padding:50px 15px;
+    }
+      .c-03-heading{
+        font-size:38px;
+      }
+
+      .c-03-description{
+        font-size:16px;
+        line-height:1.7;
+        margin-bottom:40px;
+      }
+
+    .c-03-category-wrap{
+        gap:18px;
+    }
+
+    .c-03-category-card{
+        width:100%;
+        min-width:100%;
+        padding:12px 20px 12px 12px;
+    }
+
+    .c-03-icon-box{
+        width:58px;
+        height:58px;
+        min-width:58px;
+    }
+
+    .c-03-icon-box img{
+        width:34px;
+        height:34px;
+    }
+
+    .c-03-category-title{
+        font-size:17px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .c-03-category-card{
+        gap:14px;
+        border-radius:50px;
+    }
+
+    .c-03-category-title{
+        font-size:15px;
+    }
+
+}
+
+
+
+.c05-main{
+  background-color:#ffffff;
+}
+
+
+/* SECTION */
+.c05-section{
+  padding:60px 40px;
+  background:#f5f7fb;
+}
+
+/* HEADER */
+.c05-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+  margin-right:30px;
+}
+
+.c05-header h2{
+  font-size:24px;
+  color:#1a2a6c;
+}
+
+.c05-btn{
+  background:#4c5fd7;
+  color:#fff;
+  padding:10px 15px;
+  border:none;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.3s;
+  width:150px;
+  height:50px;
+}
+
+.c05-btn:hover{
+  background:#d5431b;
+}
+
+/* GRID */
+.c05-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+/* CARD */
+.c05-card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.c05-card:hover{
+  transform:translateY(-8px);
+}
+
+/* IMAGE */
+.c05-img{
+  position:relative;
+}
+
+.c05-img img{
+  width:100%;
+  display:block;
+}
+
+/* TAG */
+.c05-tag{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#4c5fd7;
+  color:#fff;
+  font-size:12px;
+  padding:5px 8px;
+  border-radius:3px;
+}
+
+/* CONTENT */
+.c05-content{
+  padding:15px;
+  text-align:center;
+}
+
+.c05-stars{
+  color:red;
+  margin-bottom:8px;
+}
+
+.c05-title{
+  font-size:14px;
+  margin-bottom:10px;
+  color:#222;
+}
+
+.c05-info{
+  font-size:12px;
+  color:#666;
+  margin-bottom:10px;
+}
+
+.c05-price{
+  font-size:13px;
+  color:#4c5fd7;
+  font-weight:bold;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .c05-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .c05-container{
+    grid-template-columns:1fr;
+  }
+
+  .c05-header{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+}
+
+
+
+
+
+/* SECTION */
+.c03-logo-section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:20px;
+  background:#fff;
+  border-radius:10px;
+  background: white;
+}
+
+/* TEXT */
+.c03-logo-text{
+  font-size:20px;
+  font-weight:600;
+  color:#0b1c4d;
+  margin-bottom:20px;
+
+}
+
+.c03-logo-text span{
+  color:#4f6df5;
+}
+
+/* SLIDER */
+.c03-slider{
+  overflow:hidden;
+  position:relative;
+}
+
+/* TRACK */
+.c03-slide-track{
+  display:flex;
+  width:calc(200px * 10);
+  animation:c03-scroll 15s linear infinite;
+}
+
+/* LOGO */
+.c03-slide{
+  width:200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.c03-slide img{
+  height:50px;
+  opacity: 0.9;
+  /* transition:0.0s; */
+}
+
+.c03-slide img:hover{
+  opacity:1;
+}
+
+.c03-logo-section-main{
+  background-color:#ffffff;
+}
+/* ANIMATION */
+@keyframes c03-scroll{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(calc(-200px * 5));
+  }
+}
+
+/* COURSE TEXT */
+.c03-course-section{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.c03-course-section h1{
+  font-size:36px;
+  color:#0b1c4d;
+  margin-bottom:20px;
+
+}
+
+.c03-course-section p{
+  max-width:700px;
+  margin:auto;
+  color:#6b7280;
+  line-height:1.6;
+
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+
+  .c03-logo-text{
+    text-align:center;
+    font-size:18px;
+  }
+
+  .c03-slide{
+    width:150px;
+  }
+
+  .c03-slide-track{
+    width:calc(150px * 10);
+  }
+
+  @keyframes c03-scroll{
+    100%{
+      transform:translateX(calc(-150px * 5));
+    }
+  }
+
+  .c03-course-section h1{
+    font-size:28px;
+
+  }
+}
+
+@media (max-width:480px){
+
+  .c03-slide{
+    width:120px;
+  }
+
+  .c03-slide-track{
+    width:calc(120px * 10);
+  }
+
+  @keyframes c03-scroll{
+    100%{
+      transform:translateX(calc(-120px * 5));
+    }
+  }
+
+  .c03-course-section h1{
+    font-size:24px;
+  }
+}
+
+
+
+/* SECTION */
+.c-06-video-section{
+  padding:40px 20px;
+  background:#f5f6fa;
+}
+
+.c-06-video-container{
+  max-width:1000px;
+  margin:auto;
+  position:relative;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+/* IMAGE */
+.c-06-video-img{
+  width:100%;
+  display:block;
+}
+
+/* OVERLAY */
+.c-06-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,0.5);
+}
+
+/* PLAY BUTTON */
+.c-06-play-btn{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:90px;
+  height:90px;
+  background:#4f6cff;
+  color:#fff;
+  font-size:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 0 0 15px rgba(79,108,255,0.2);
+  transition:0.3s;
+}
+
+.c-06-play-btn:hover{
+  transform:translate(-50%,-50%) scale(1.1);
+}
+
+/* VIDEO PAGE */
+.c-06-video-page{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  background:#000;
+  padding:20px;
+}
+
+.c-06-video-wrapper{
+  width:100%;
+  max-width:900px;
+}
+
+.c-06-video-wrapper video{
+  width:100%;
+  border-radius:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .c-06-play-btn{
+    width:70px;
+    height:70px;
+    font-size:24px;
+  }
+}
+
+@media(max-width:480px){
+  .c-06-play-btn{
+    width:60px;
+    height:60px;
+    font-size:20px;
+  }
+}
+
+
+
+
+
+.c08-instructors {
+  padding: 60px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.c08-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.c08-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.c08-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.c08-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.c08-card {
+  background: #fff;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  transition: 0.3s;
+}
+
+.c08-card:hover {
+  transform: translateY(-5px);
+}
+
+.c08-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.c08-img-wrap img {
+  width: 100%;
+  display: block;
+}
+
+.c08-social {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4c5cff;
+  padding: 10px 5px;
+  border-radius: 6px;
+}
+
+.c08-social a {
+  display: block;
+  color: #fff;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.c08-name {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.c08-role {
+  color: #777;
+  margin: 5px 0 10px;
+}
+
+.c08-meta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .c08-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .c08-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .c08-title {
+    font-size: 28px;
+  }
+}
+
+
+
+/* SECTION */
+.AA-01-section{
+  padding:60px 20px;
+  background:#f8f9fc;
+}
+
+.AA-01-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* LEFT */
+.AA-01-left{
+  flex:1;
+  min-width:300px;
+}
+
+.AA-01-left h2{
+  font-size:32px;
+  color:#0b1c4d;
+  margin-bottom:20px;
+  line-height:1.3;
+}
+
+.AA-01-left p{
+  color:#6b7280;
+  margin-bottom:15px;
+  line-height:1.6;
+}
+
+/* LIST */
+.AA-01-left ul{
+  list-style:none;
+  margin:20px 0;
+}
+
+.AA-01-left ul li{
+  margin-bottom:10px;
+  position:relative;
+  padding-left:25px;
+}
+
+.AA-01-left ul li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#4f6cff;
+}
+
+/* BUTTON */
+.AA-01-btn{
+  display:inline-block;
+  margin-top:15px;
+  background:#4f6cff;
+  color:#fff;
+  padding:12px 22px;
+  border-radius:6px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.AA-01-btn:hover{
+  background:#2f49d1;
+}
+
+/* RIGHT */
+.AA-01-right{
+  flex:1;
+  min-width:300px;
+  position:relative;
+}
+
+.AA-01-right img{
+  width:70%;
+  border-radius:10px;
+}
+
+/* FLOAT CARD */
+.AA-01-card{
+  position:absolute;
+  bottom:170px;
+  right:150px;
+  background:#fff;
+  padding:15px 20px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.AA-01-card span{
+  font-size:20px;
+}
+
+.AA-01-card h3{
+  font-size:22px;
+  color:#0b1c4d;
+}
+
+.AA-01-card p{
+  font-size:14px;
+  color:#6b7280;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .AA-01-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .AA-01-card{
+    right:50%;
+    transform:translateX(50%);
+  }
+}
+
+@media(max-width:600px){
+  .AA-01-left h2{
+    font-size:24px;
+  }
+
+  .AA-01-card{
+    position:static;
+    margin-top:15px;
+    justify-content:center;
+  }
+}
+
+{
+  padding:70px 20px;
+  background:linear-gradient(90deg,#eaf0ff,#fdf6f0);
+}
+
+.AA-002-container{
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADING */
+.AA-002-heading{
+  text-align:center;
+  font-size:32px;
+  color:#0b1c4d;
+  margin-bottom:50px;
+}
+
+/* WRAPPER */
+.AA-002-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* LEFT */
+.AA-002-left{
+  flex:1;
+  min-width:300px;
+  position:relative;
+}
+
+.AA-002-img-box img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* SMALL IMAGE */
+.AA-002-small-img{
+  position:absolute;
+  bottom:-20px;
+  right:20px;
+  width:120px;
+  border-radius:10px;
+  border:4px solid #fff;
+}
+
+/* DECOR */
+.AA-002-dot{
+  position:absolute;
+  top:-10px;
+  left:-10px;
+  width:20px;
+  height:20px;
+  background:#4f6cff;
+  border-radius:50%;
+}
+
+.AA-002-circle{
+  position:absolute;
+  bottom:-40px;
+  left:-40px;
+  width:80px;
+  height:80px;
+  border:6px solid #ff6b6b;
+  border-radius:50%;
+}
+
+/* RIGHT */
+.AA-002-right{
+  flex:1;
+  min-width:300px;
+}
+
+/* CARD */
+.AA-002-card{
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.AA-002-quote{
+  font-size:40px;
+  color:#4f6cff;
+}
+
+.AA-002-stars{
+  color:#4f6cff;
+  margin:10px 0;
+}
+
+.AA-002-card p{
+  color:#6b7280;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+/* USER */
+.AA-002-user{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#f5f6fa;
+  padding:10px;
+  border-radius:8px;
+}
+
+.AA-002-user img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+
+.AA-002-user h4{
+  font-size:14px;
+}
+
+.AA-002-user span{
+  font-size:12px;
+  color:#6b7280;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .AA-002-wrapper{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .AA-002-user{
+    justify-content:center;
+  }
+}
+
+@media(max-width:600px){
+  .AA-002-heading{
+    font-size:24px;
+  }
+
+  .AA-002-small-img{
+    width:90px;
+  }
+}
+
+
+
+
+
+.d01-blog-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.d01-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.d01-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* GRID LAYOUT */
+.d01-blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.d01-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.d01-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.d01-card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.d01-card-title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.d01-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.d01-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #4a5cff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.d01-blog-section{
+  background-color:#ffffff;
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .d01-blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .d01-blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .d01-title {
+    font-size: 24px;
+  }
+}
+
+
+.d01-footer {
+  background: #f4f5fb;
+  padding: 60px 20px 20px;
+  font-family: sans-serif;
+}
+
+.d01-footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.d01-footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.d01-logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.d01-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.d01-footer-col ul {
+  list-style: none;
+}
+
+.d01-footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.d01-footer-col ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.d01-footer-col ul li a:hover {
+  color: #4a5cff;
+}
+
+.d01-social a {
+  display: inline-block;
+  margin-right: 10px;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.d01-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #4a5cff;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.d01-btn-dark {
+  background: #111;
+}
+
+.d01-footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .d01-footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .d01-footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .d01-footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .d01-footer {
+    text-align: center;
+  }
+}
+
+
+
+
+</style>
+<body>
+<header class="navbar">
+
+  <div class="logo">CATALYST PROGRAMMERS</div>
+
+  <!-- CHECKBOX TOGGLE -->
+  <input type="checkbox" id="menu-check">
+  <label for="menu-check" class="menu-toggle">☰</label>
+
+  <ul class="menu">
+
+    <li class="dropdown">
+      <a href="#">Home ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Home 01</a></li>
+        <li><a href="#">Home 02</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">About</a></li>
+
+    <li class="dropdown">
+      <a href="#">Course ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="./page 2.2.html">Course</a></li>
+        <li><a href="./page2.3.html">Course Details</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Pages ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Instructor</a></li>
+        <li><a href="#">Instructor Details</a></li>
+        <li><a href="#">Pricing Plan</a></li>
+        <li><a href="#">Faq Page</a></li>
+        <li><a href="#">404</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Blog ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Blog Details</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Contact</a></li>
+
+  </ul>
+
+  <div class="auth">
+    <a href="#">Sign In</a>
+    <a href="#" class="btn">Sign Up</a>
+  </div>
+
+</header>
+
+
+  <div class="c-01-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="c-01-left">
+      <h1>
+        <span>Smart Study</span> Where <br>
+        Knowledge Meets <br>
+        the Web
+      </h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit tempor ut labore</p>
+
+      <!-- SEARCH -->
+      <div class="c-01-search">
+        <input type="text" placeholder="Search Your Course Here">
+        <button>Search ✈</button>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="c-01-right">
+      <img src="./home-img2.png" alt="student">
+
+      <div class="c-01-badge">
+        <strong>4500+</strong>
+        <span>Active student</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cards">
+
+  <div class="card">
+    <div class="icon icon1">📁</div>
+    <div class="content">
+      <h2>134</h2>
+      <p>Our Online Course</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon icon2">🎓</div>
+    <div class="content">
+      <h2>299</h2>
+      <p>Academic Programs</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon icon3">✉</div>
+    <div class="content">
+      <h2>684</h2>
+      <p>Certified Students</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon icon4">👤</div>
+    <div class="content">
+      <h2>941</h2>
+      <p>Enrolled Students</p>
+    </div>
+  </div>
+
+</div>
+
+</section>
+<section class="c-02-section">
+
+  <!-- TOP -->
+  <div class="c-02-top">
+    <h2>Start your journey With us</h2>
+    <p>
+      We offer a brand new approach to the most basic learning paradigms.
+      Choose from a wide range of learning options and gain new skills.
+    </p>
+
+    <div class="c-02-features">
+
+      <div class="c-02-card">
+        <div class="c-02-card-top">
+          <div class="c-02-icon c-02-icon1">01</div>
+          <h3>Expert Teachers</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="c-02-card">
+        <div class="c-02-card-top">
+          <div class="c-02-icon c-02-icon2">02</div>
+          <h3>Quality Education</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="c-02-card">
+        <div class="c-02-card-top">
+          <div class="c-02-icon c-02-icon3">03</div>
+          <h3>Remote Learning</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="c-02-card">
+        <div class="c-02-card-top">
+          <div class="c-02-icon c-02-icon4">04</div>
+          <h3>Life Time Support</h3>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="c-02-bottom">
+
+    <!-- IMAGE -->
+    <div class="c-02-image">
+<!-- 
+      <span class="c-02-circle1"></span>
+      <span class="c-02-circle2"></span> -->
+
+      <img 
+      class="c-02-main-img"
+      src="./home about1 (1).png"
+      alt="">
+
+      <!-- <img 
+      class="c-02-small-img"
+      src="./home about2 (1).png"
+      alt=""> -->
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="c-02-content">
+
+      <h2>We Are Providing The Online Course In Global World</h2>
+
+      <p>
+        We offer a brand new approach to the most basic learning paradigms.
+        Choose from a wide range of learning options and gain new skills.
+      </p>
+
+      <p>
+        Choose from a wide range of learning options and gain new skills
+        our school is known for quality education.
+      </p>
+
+      <ul class="c-02-list">
+        <li>✓ Get access to 12,000+ of our top courses</li>
+        <li>✓ Popular topic to learn now in our online courses</li>
+        <li>✓ Find the right instructor for you</li>
+      </ul>
+
+      <a href="#" class="c-02-btn">
+        View All Courses →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="c-03-category-section">
+
+     <div class="c-03-arrow">↷</div>
+
+    <div class="c-03-container">
+
+      <h1 class="c-03-heading">
+        Find out by popular Categories
+      </h1>
+
+      <p class="c-03-description">
+        We offer a brand new approach to the most basic learning paradigms.
+        Choose from a wide range of learning options and gain new skills!
+        Our school is know.
+      </p>
+
+    <div class="c-03-container">
+
+        <div class="c-03-category-wrap">
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Digital Marketing
+                </h3>
+            </div>
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    UI/UX Design
+                </h3>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721268.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    3D Visual Design
+                </h3>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Content Marketing
+                </h3>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Photography
+                </h3>
+            </div>
+
+
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Photo Lifestyle
+                </h3>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2436/2436874.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Art & Design
+                </h3>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331941.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Finance & Banking
+                </h3>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Graphic Design
+                </h3>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Interior Design
+                </h3>
+            </div>
+
+            <!-- ACTIVE ITEM -->
+
+            <div class="c-03-category-card ">
+
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721268.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    3D Visual Design
+                </h3>
+            </div>
+
+            <!-- ITEM -->
+
+            <div class="c-03-category-card">
+                <div class="c-03-icon-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2436/2436874.png">
+                </div>
+                <h3 class="c-03-category-title">
+                    Art & Design
+                </h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="c05-main">
+
+
+  <div class="c05-header">
+    <h1>Join with more than 80,000+<br>
+Courses & Learning creators.</h1>
+    
+    <button class="c05-btn">View All Courses →</button>
+  </div>
+
+  <div class="c05-container">
+
+    <!-- CARD 1 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./1.png">
+        <span class="c05-tag">Beginner</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete user fundamentals beginners to advanced</div>
+        <div class="c05-info">12 Course • 2h 32 Min</div>
+        <div class="c05-price">Course Fee - 999</div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./2.png">
+        <span class="c05-tag">UI/UX</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Advanced Android 12 & Kotlin Development Course</div>
+        <div class="c05-info">12 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 499</div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./3.png">
+        <span class="c05-tag">Web</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete HTML, CSS and Javascript Course</div>
+        <div class="c05-info">32 Course • 7h 32 Min</div>
+        <div class="c05-price">Course Fee - Free</div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./4.png">
+        <span class="c05-tag">iOS</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">IOS and Swift Complete iOS Application Development</div>
+        <div class="c05-info">12 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 699</div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./5.png">
+        <span class="c05-tag">Design</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Learn graphics design with best IT Trainer</div>
+        <div class="c05-info">22 Course • 2h 32 Min</div>
+        <div class="c05-price">Course Fee - 799</div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./6.png">
+        <span class="c05-tag">Business</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete data science for your next business</div>
+        <div class="c05-info">11 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 399</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  <!-- LOGO SECTION -->
+ <DIV CLASS="c03-logo-section-main">
+<div class="c03-logo-section">
+
+  <div class="c03-logo-text">
+  <CENTER>  Helping <span>86,000+</span> global<br> companies take the gloves off    </CENTER>        
+  </div>
+
+  <div class="c03-slider">
+    <div class="c03-slide-track">
+
+      <!-- LOGOS (duplicate for smooth loop) -->
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Diamond"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Rixdot"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Eight"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Rel"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Brand"></div>
+
+      <!-- DUPLICATE -->
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Diamond"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Rixdot"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Eight"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Rel"></div>
+      <div class="c03-slide"><img src="https://dummyimage.com/100x30/000/fff&text=Brand"></div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+<section class="c-06-video-section">
+
+  <div class="c-06-video-container">
+
+    <!-- IMAGE -->
+    <img src="./fundamentals beginners to advanced.jfif" alt="Video" class="c-06-video-img">
+
+    <!-- OVERLAY -->
+    <div class="c-06-overlay"></div>
+
+    <!-- PLAY BUTTON -->
+    <a href="video.html" class="c-06-play-btn">
+      ▶
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="c08-instructors">
+  <div class="c08-container">
+    <h2 class="c08-title">Meet our Instructors</h2>
+    <p class="c08-subtitle">
+      We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of <br>
+      learning options and gain new skills! Our school is know.
+    </p>
+
+    <div class="c08-grid">
+      
+      <!-- Card 1 -->
+      <div class="c08-card">
+        <div class="c08-img-wrap">
+          <img src="./team1.jpg" alt="">
+          <div class="c08-social">
+            <a href="#">×</a>
+            <a href="#">f</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+        <h3 class="c08-name">Bilkis Vabi</h3>
+        <p class="c08-role">Web designer</p>
+        <div class="c08-meta">
+          <span>04 Course</span>
+          <span>27 Student</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="c08-card">
+        <div class="c08-img-wrap">
+          <img src="./team2.jpg" alt="">
+          <div class="c08-social">
+            <a href="#">×</a>
+            <a href="#">f</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+        <h3 class="c08-name">Mood Wasim</h3>
+        <p class="c08-role">TemplateMonster company</p>
+        <div class="c08-meta">
+          <span>06 Course</span>
+          <span>41 Student</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="c08-card">
+        <div class="c08-img-wrap">
+          <img src="./team3.jpg" alt="">
+          <div class="c08-social">
+            <a href="#">×</a>
+            <a href="#">f</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+        <h3 class="c08-name">Shyinn tim</h3>
+        <p class="c08-role">Codecanyou</p>
+        <div class="c08-meta">
+          <span>13 Course</span>
+          <span>31 Student</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="c08-card">
+        <div class="c08-img-wrap">
+          <img src="./team4.jpg" alt="">
+          <div class="c08-social">
+            <a href="#">×</a>
+            <a href="#">f</a>
+            <a href="#">in</a>
+          </div>
+        </div>
+        <h3 class="c08-name">Shorif shorifa</h3>
+        <p class="c08-role">Tsc chottor</p>
+        <div class="c08-meta">
+          <span>07 Course</span>
+          <span>24 Student</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="AA-01-section">
+
+  <div class="AA-01-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="AA-01-left">
+
+      <h2>
+        Why Choose Us For Your Online <br>
+        Education Courses
+      </h2>
+
+      <p>
+        We offer a brand new approach to the most basic learning paradigms.
+        Choose from a wide range of learning options and gain new skills!
+        Our school is know.
+      </p>
+
+      <p>
+        We offer a brand new approach to the most basic learning paradigms.
+        Choose from a wide range of learning options and gain new skills!
+        Our school is know.
+      </p>
+
+      <ul>
+        <li>Get access to 12,000+ of our top courses</li>
+        <li>Popular topic to learn now in our online courses for student</li>
+        <li>Find the right instructor for you</li>
+      </ul>
+
+      <a href="#" class="AA-01-btn">View All Courses →</a>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="AA-01-right">
+
+      <img src="./about333333333333.png" alt="teacher" height="450px" >
+
+      <!-- FLOATING CARD -->
+      <div class="AA-01-card">
+        <span>📘</span>
+        <div>
+          <h3>3300+</h3>
+          <p>Online Course</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="AA-002-section">
+
+  <div class="AA-002-container">
+
+    <!-- HEADING -->
+    <h2 class="AA-002-heading">
+      What Student’s Say To Do <br> Their Online Course
+    </h2>
+
+    <div class="AA-002-wrapper">
+
+      <!-- LEFT IMAGE AREA -->
+      <div class="AA-002-left">
+
+        <div class="AA-002-img-box">
+          <img src="./uniq1.png" alt="">
+        </div>
+
+     
+
+      </div>
+
+      <!-- RIGHT CARD -->
+      <div class="AA-002-right">
+
+        <div class="AA-002-card">
+
+          <div class="AA-002-quote">❝</div>
+
+          <div class="AA-002-stars">
+            ★ ★ ★ ★ ★
+          </div>
+
+          <p>
+            Agestic optio amet a ququam saepe aliquid voluptate dicta fuga
+            dolor saerror sed earum a magni soluta quam minus dolor dolor
+            sed earum a magni soluta autem dolor error error sit quam minus
+            sint rem a rerum doloribus veritatis delectus.
+          </p>
+
+          <div class="AA-002-user">
+            <img src="./1 (1).png" alt="">
+            <div>
+              <h4>Ajmain Adil</h4>
+              <span>Groton Inc</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="d01-blog-section">
+  <h2 class="d01-title">Latest Blog & News</h2>
+  <p class="d01-subtitle">
+   We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of<br>
+    learning options and gain new skills! Our school is know.
+  </p>
+
+  <div class="d01-blog-container">
+
+    <div class="d01-card">
+      <img src="./1.1.jpg" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 10, 2024 | Education</p>
+        <h3 class="d01-card-title">Professional Mobile Painting 
+          and Sculpting</h3>
+        <button class="d01-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="d01-card">
+      <img src="./1.2.jpg" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 16, 2024 | Education</p>
+        <h3 class="d01-card-title">Professional Ceramic Moulding for 
+           Beginner</h3>
+        <button class="d01-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="d01-card">
+      <img src="./1.3.jpg" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 18, 2024 | Programing</p>
+        <h3 class="d01-card-title">Education Is About Create Leaders For  
+          Tomorrow</h3>
+        <button class="d01-btn">Read More</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<footer class="d01-footer">
+  <div class="d01-footer-container">
+
+    <!-- Column 1 -->
+    <div class="d01-footer-col">
+   <center><h2 class="d01-logo">🎓Catalystprogrammers IT Training Institute</h2></center>   
+      <p class="d01-text">
+      Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit.
+      Fusce vitae risus nec dui
+      venenatis dignissim.
+      </p>
+
+      <div class="d01-social">
+        <a href="#">X</a>
+        <a href="#">F</a>
+        <a href="#">I</a>
+        <a href="#">L</a>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="d01-footer-col">
+      <h3>About catyalast</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Instructor Registration</a></li>
+        <li><a href="#">Become A Teacher</a></li>
+        <li><a href="#">All Instructors</a></li>
+        <li><a href="#">Asked Question</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="d01-footer-col">
+      <h3>Popular Course</h3>
+      <ul>
+        <li><a href="#">Development</a></li>
+        <li><a href="#">Arts & Design</a></li>
+        <li><a href="#">Visual Design</a></li>
+        <li><a href="#">Graphic Design</a></li>
+        <li><a href="#">Code Inspection</a></li>
+        <li><a href="#">Digital Marketing</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="d01-footer-col">
+      <h3>Contact Info</h3>
+      <p>📍6/433, Hans Vihar, RIICO Industrial Area, 
+        Mansarovar, Jaipur, Rajasthan 302020.</p><br>
+      <p>📞 +91 8503967987.</p><br>
+      <p> ✉catalystprogrammers@gmail.com </p><br>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="d01-footer-col">
+      <h3>Download App</h3>
+      <p>Download our app from play store</p>
+
+      <button class="d01-btn">Google Play</button>
+      <button class="d01-btn d01-btn-dark">App Store</button>
+    </div>
+
+  </div>
+
+  <div class="d01-footer-bottom">
+    <p>© 2024 All Rights Reserved</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

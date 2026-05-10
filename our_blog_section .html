@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduleb Navbar</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  /* background: #0a0f3c; */
+
+}
+
+body {
+  background: #0a0f3c;
+}
+
+
+
+
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 8%;
+  background: #fff;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #0a0a23;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background: linear-gradient(135deg, #5a67d8, #6b73ff);
+  border-radius: 12px;
+  padding: 15px 0;
+  width: 220px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* DESKTOP HOVER */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ITEMS */
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 22px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* AUTH */
+.auth a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #5a67d8;
+  font-weight: 500;
+}
+
+.auth .btn {
+  background: #5a67d8;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+}
+
+.hover .auth.btn {
+  background: #e4ce40;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 6px;
+}
+
+/* MOBILE TOGGLE */
+#menu-check {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* MOBILE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    transition: 0.3s;
+  }
+
+  /* OPEN MENU */
+  #menu-check:checked ~ .menu {
+    left: 0;
+  }
+
+  .menu li {
+    padding: 12px 20px;
+  }
+
+  /* DROPDOWN MOBILE */
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background: #f3f4ff;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  /* OPEN DROPDOWN */
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+  }
+
+  .auth {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* SECTION */
+.virat1-section{
+  position:relative;
+  padding:100px 20px;
+  text-align:center;
+  overflow:hidden;
+
+  /* Gradient same style */
+  background: linear-gradient(90deg,#f4e7d3,#e6ebff);
+}
+
+/* CONTENT */
+.virat1-content h1{
+  font-size:48px;
+  color:#0b1c4d;
+  margin-bottom:10px;
+}
+
+.virat1-content p{
+  font-size:18px;
+  color:#333;
+}
+
+.virat1-content a{
+  color:#4f6cff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* DECORATIONS */
+
+/* red dot */
+.virat1-dot{
+  position:absolute;
+  top:40px;
+  left:50%;
+  width:10px;
+  height:10px;
+  background:#ff6b6b;
+  border-radius:50%;
+}
+
+/* circle left */
+.virat1-circle{
+  position:absolute;
+  left:100px;
+  top:60%;
+  width:25px;
+  height:25px;
+  border:2px solid #6c7cff;
+  border-radius:50%;
+}
+
+/* arrow right (simple CSS) */
+.virat1-arrow{
+  position:absolute;
+  right:120px;
+  top:60%;
+  width:80px;
+  height:80px;
+  border:3px solid transparent;
+  border-right:3px solid #f4b400;
+  border-bottom:3px solid #f4b400;
+  border-radius:50%;
+  transform:rotate(-30deg);
+}
+
+.virat1-arrow::after{
+  content:"";
+  position:absolute;
+  right:-6px;
+  bottom:-6px;
+  width:10px;
+  height:10px;
+  border-right:3px solid #f4b400;
+  border-bottom:3px solid #f4b400;
+  transform:rotate(45deg);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .virat1-content h1{
+    font-size:32px;
+  }
+
+  .virat1-content p{
+    font-size:16px;
+  }
+
+  .virat1-circle{
+    left:30px;
+  }
+
+  .virat1-arrow{
+    right:30px;
+    width:60px;
+    height:60px;
+  }
+}
+
+@media(max-width:480px){
+  .virat1-section{
+    padding:70px 15px;
+  }
+
+  .virat1-content h1{
+    font-size:26px;
+  }
+}
+
+
+
+
+
+
+.d01-blog-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.d01-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.d01-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* GRID LAYOUT */
+.d01-blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.d01-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.d01-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.d01-card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.d01-card-title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.d01-date {
+  font-size: 14px;
+  color: #888;
+}
+
+.d01-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #4a5cff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.d01-blog-section{
+  background-color:#ffffff;
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .d01-blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .d01-blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .d01-title {
+    font-size: 24px;
+  }
+}
+
+
+.d01-footer {
+  background: #f4f5fb;
+  padding: 60px 20px 20px;
+  font-family: sans-serif;
+}
+
+.d01-footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.d01-footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.d01-logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.d01-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.d01-footer-col ul {
+  list-style: none;
+}
+
+.d01-footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.d01-footer-col ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.d01-footer-col ul li a:hover {
+  color: #4a5cff;
+}
+
+.d01-social a {
+  display: inline-block;
+  margin-right: 10px;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.d01-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #4a5cff;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.d01-btn-dark {
+  background: #111;
+}
+
+.d01-footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .d01-footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .d01-footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .d01-footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .d01-footer {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+</style>
+<body>
+
+<header class="navbar">
+
+  <div class="logo">CATALYST PROGRAMMERS</div>
+
+  <!-- CHECKBOX TOGGLE -->
+  <input type="checkbox" id="menu-check">
+  <label for="menu-check" class="menu-toggle">☰</label>
+
+  <ul class="menu">
+
+    <li class="dropdown">
+      <a href="#">Home ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Home 01</a></li>
+        <li><a href="#">Home 02</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">About</a></li>
+
+    <li class="dropdown">
+      <a href="#">Course ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="./page 2.2.html">Course</a></li>
+        <li><a href="./page2.3.html">Course Details</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Pages ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Instructor</a></li>
+        <li><a href="#">Instructor Details</a></li>
+        <li><a href="#">Pricing Plan</a></li>
+        <li><a href="#">Faq Page</a></li>
+        <li><a href="#">404</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Blog ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Blog Details</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Contact</a></li>
+
+  </ul>
+
+  <div class="auth">
+    <a href="#">Sign In</a>
+    <a href="#" class="btn">Sign Up</a>
+  </div>
+
+</header>
+
+
+
+<section class="virat1-section">
+
+  <!-- DECOR SHAPES -->
+  <div class="virat1-dot"></div>
+  <div class="virat1-circle"></div>
+  <div class="virat1-arrow"></div>
+
+  <div class="virat1-content">
+    <h1>Our Blog</h1>
+    <p><a href="#">Home</a> / Blog</p>
+  </div>
+
+</section>
+
+
+<section class="d01-blog-section">
+  <h2 class="d01-title">Latest Blog & News</h2>
+  <p class="d01-subtitle">
+   We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of<br>
+    learning options and gain new skills! Our school is know.
+  </p>
+
+  <div class="d01-blog-container">
+
+    <div class="d01-card">
+      <img src="./1.1.jpg" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 10, 2024 | Education</p>
+        <h3 class="d01-card-title">Professional Mobile Painting 
+          and Sculpting</h3>
+        <button class="d01-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="d01-card">
+      <img src="./1.2.jpg" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 16, 2024 | Education</p>
+        <h3 class="d01-card-title">Professional Ceramic Moulding for 
+           Beginner</h3>
+        <button class="d01-btn">Read More</button>
+      </div>
+    </div>
+
+    <div class="d01-card">
+      <img src="./1.3.jpg" class="d01-card-img" />
+      <div class="d01-card-body">
+        <p class="d01-date">May 18, 2024 | Programing</p>
+        <h3 class="d01-card-title">Education Is About Create Leaders For  
+          Tomorrow</h3>
+        <button class="d01-btn">Read More</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<footer class="d01-footer">
+  <div class="d01-footer-container">
+
+    <!-- Column 1 -->
+    <div class="d01-footer-col">
+   <center><h2 class="d01-logo">🎓Catalystprogrammers IT Training Institute</h2></center>   
+      <p class="d01-text">
+      Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit.
+      Fusce vitae risus nec dui
+      venenatis dignissim.
+      </p>
+
+      <div class="d01-social">
+        <a href="#">X</a>
+        <a href="#">F</a>
+        <a href="#">I</a>
+        <a href="#">L</a>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="d01-footer-col">
+      <h3>About catyalast</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Instructor Registration</a></li>
+        <li><a href="#">Become A Teacher</a></li>
+        <li><a href="#">All Instructors</a></li>
+        <li><a href="#">Asked Question</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="d01-footer-col">
+      <h3>Popular Course</h3>
+      <ul>
+        <li><a href="#">Development</a></li>
+        <li><a href="#">Arts & Design</a></li>
+        <li><a href="#">Visual Design</a></li>
+        <li><a href="#">Graphic Design</a></li>
+        <li><a href="#">Code Inspection</a></li>
+        <li><a href="#">Digital Marketing</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="d01-footer-col">
+      <h3>Contact Info</h3>
+      <p>📍6/433, Hans Vihar, RIICO Industrial Area, 
+        Mansarovar, Jaipur, Rajasthan 302020.</p><br>
+      <p>📞 +91 8503967987.</p><br>
+      <p> ✉catalystprogrammers@gmail.com </p><br>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="d01-footer-col">
+      <h3>Download App</h3>
+      <p>Download our app from play store</p>
+
+      <button class="d01-btn">Google Play</button>
+      <button class="d01-btn d01-btn-dark">App Store</button>
+    </div>
+
+  </div>
+
+  <div class="d01-footer-bottom">
+    <p>© 2024 All Rights Reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+
+

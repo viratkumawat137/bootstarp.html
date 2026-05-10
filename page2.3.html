@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduleb Navbar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  /* background: #0a0f3c; */
+
+}
+
+body {
+  /* background: #0a0f3c; */
+}
+
+/* Header */
+header {
+  background: #fff;
+  padding: 15px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color:rgb(15,20,77);
+  margin-left: -70px;
+}
+.logo-img{
+  margin-right:60px;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background:#111;
+  padding: 10px 0;
+  width: 160px;
+  display: none;
+  border-radius: 6px;
+  color:#111;
+
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu a {
+  color: #fff;
+}
+
+/* Hover effect */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Auth buttons */
+.auth {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.auth .btn {
+  background:rgb(15,20,77);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.btn:hover{
+  background: #c4550c;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+
+/* Mobile */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+
+
+}
+
+#menu-toggle {
+  display: none;
+
+}
+.dropdown{
+   font-size: 20px;
+  font-weight: 900;
+  color:rgb(15,20,77);
+ 
+}
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: linear-gradient(360deg, #d7d3d3, #000000);
+  padding: 10px 0;
+  width: 200px;
+  display: none;
+  border-radius: 8px;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.dropdown-menu a {
+  color: #fff;
+  font-size: 14px;
+  color:#111;
+
+}
+
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  color:#111;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+.text-01{
+
+  color:rgb(15,20,77);
+  font-size:25px;
+  font-weight:900;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+  }
+
+  .menu li {
+    padding: 15px;
+  }
+
+  #menu-toggle:checked ~ nav .menu {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .auth {
+    display: none;
+  }
+
+  /* Dropdown mobile */
+  .dropdown-menu {
+    position: static;
+    background: #eee;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+
+
+
+/* ===== BANNER ===== */
+.c07-banner{
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  padding: 60px 20px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  overflow:hidden;
+  background: linear-gradient(90deg,#f3e7d6,#cfd5f5);
+}
+
+/* ===== CONTENT ===== */
+.c07-content{
+  max-width: 900px;
+  width: 100%;
+}
+
+.c07-content h1{
+  font-size: clamp(26px, 5vw, 48px);
+  font-weight: 700;
+  color:#0b1445;
+  margin-bottom:10px;
+}
+
+.c07-content p{
+  font-size: clamp(14px, 2vw, 18px);
+  color:#444;
+}
+
+.c07-content span{
+  color:#4a6cf7;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* ===== DECORATIONS ===== */
+
+/* Red Dot */
+.c07-dot{
+  position:absolute;
+  top:15%;
+  left:55%;
+  width:10px;
+  height:10px;
+  background:#ff5a5a;
+  border-radius:50%;
+}
+
+/* Circle */
+.c07-circle{
+  position:absolute;
+  left:10%;
+  bottom:20%;
+  width:22px;
+  height:22px;
+  border:2px solid #6c63ff;
+  border-radius:50%;
+}
+
+/* Arrow Shape */
+.c07-arrow{
+  position:absolute;
+  right:10%;
+  top:50%;
+  width:70px;
+  height:70px;
+  border:2px dashed orange;
+  border-radius:50%;
+  transform: rotate(45deg);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px){
+  .c07-banner{
+    padding:50px 15px;
+  }
+
+  .c07-arrow{
+    width:55px;
+    height:55px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px){
+  .c07-banner{
+    padding:40px 10px;
+    min-height:200px;
+  }
+
+  .c07-dot{
+    top:10%;
+    left:70%;
+  }
+
+  .c07-circle{
+    left:5%;
+    bottom:10%;
+  }
+
+  .c07-arrow{
+    display:none; /* mobile me clean look */
+  }
+}
+
+
+
+
+
+
+.c05-main{
+  background-color:#ffffff;
+  margin:60px auto;
+}
+
+
+
+
+
+/* SECTION */
+.c05-section{
+  padding:50px 20px;
+  background:#f5f7fb;
+}
+
+/* HEADER */
+.c05-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+  margin-right:50px;
+}
+
+.c05-header h2{
+  font-size:24px;
+  color:#1a2a6c;
+}
+
+.c05-btn{
+  background:#4c5fd7;
+  color:#fff;
+  padding:10px 15px;
+  border:none;
+  cursor:pointer;
+  border-radius:4px;
+  transition:0.3s;
+  width:150px;
+  height:50px;
+}
+
+.c05-btn:hover{
+  background:#d5431b;
+}
+
+/* GRID */
+.c05-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+/* CARD */
+.c05-card{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.c05-card:hover{
+  transform:translateY(-8px);
+}
+
+/* IMAGE */
+.c05-img{
+  position:relative;
+}
+
+.c05-img img{
+  width:100%;
+  display:block;
+}
+
+/* TAG */
+.c05-tag{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#4c5fd7;
+  color:#fff;
+  font-size:12px;
+  padding:5px 8px;
+  border-radius:3px;
+}
+
+/* CONTENT */
+.c05-content{
+  padding:15px;
+  text-align:center;
+}
+
+.c05-stars{
+  color:red;
+  margin-bottom:8px;
+}
+
+.c05-title{
+  font-size:14px;
+  margin-bottom:10px;
+  color:#222;
+}
+
+.c05-info{
+  font-size:12px;
+  color:#666;
+  margin-bottom:10px;
+}
+
+.c05-price{
+  font-size:13px;
+  color:#4c5fd7;
+  font-weight:bold;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .c05-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .c05-container{
+    grid-template-columns:1fr;
+  }
+
+  .c05-header{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+}
+
+.d01-footer {
+  background: #f4f5fb;
+  padding: 60px 20px 20px;
+  font-family: sans-serif;
+}
+
+.d01-footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.d01-footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.d01-logo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.d01-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.d01-footer-col ul {
+  list-style: none;
+}
+
+.d01-footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.d01-footer-col ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.d01-footer-col ul li a:hover {
+  color: #4a5cff;
+}
+
+.d01-social a {
+  display: inline-block;
+  margin-right: 10px;
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.d01-btn {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #4a5cff;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.d01-btn-dark {
+  background: #111;
+}
+
+.d01-footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 📱 RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .d01-footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .d01-footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .d01-footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .d01-footer {
+    text-align: center;
+  }
+}
+
+</style>
+<body>
+    <header>
+  <div class="container">
+     
+   
+ <div class="logo-img"> <img src="./catalystprogrammers-logo.png" width="90" height="60" >   </div>
+  <div class="logo"> Catalyst  Programmers</div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <nav>
+     
+      <ul class="menu">
+        <li class="dropdown">
+          <a href="#" >Home ▾</a>
+        
+          <ul class="dropdown-menu">
+            <li><a href="#">Home 01</a></li>
+            <li><a href="#">Home 02</a></li>
+          </ul>
+        </li>
+
+       
+
+        <li class="dropdown">
+          <a href="#">Course ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Course 01</a></li>
+            <li><a href="#">Course 02</a></li>
+          </ul>
+        </li>
+
+       <li class="dropdown">
+  <a href="#">Pages ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Instructor</a></li>
+    <li><a href="#">Instructor Details</a></li>
+    <li><a href="#">Pricing Plan</a></li>
+    <li><a href="#">Faq Page</a></li>
+    <li><a href="#">404</a></li>
+  </ul>
+</li>
+
+<li class="dropdown">
+  <a href="#">Blog ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Blog Details</a></li>
+  </ul>
+</li>
+        <li><a class="text-01" href="#" >Contact</a></li>
+         <li><a  class="text-01" href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="auth">
+      <a href="#" class="btn" >LOG In</a>
+      <a href="#" class="btn">Sign Up</a>
+    </div>
+
+  </div>
+</header>
+
+
+
+
+
+
+<section class="c07-banner">
+  <div class="c07-content">
+    <h1> Course Details</h1>
+    <p><span>Home</span> / Course Details </p>
+  </div>
+
+  <!-- Decorations -->
+  <span class="c07-dot"></span>
+  <span class="c07-circle"></span>
+  <span class="c07-arrow"></span>
+</section>
+
+
+<div class="c05-main">
+
+
+  <div class="c05-container">
+
+    <!-- CARD 1 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./1.png">
+        <span class="c05-tag">Beginner</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete user fundamentals beginners to advanced</div>
+        <div class="c05-info">12 Course • 2h 32 Min</div>
+        <div class="c05-price">Course Fee - 999</div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./2.png">
+        <span class="c05-tag">UI/UX</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Advanced Android 12 & Kotlin Development Course</div>
+        <div class="c05-info">12 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 499</div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./3.png">
+        <span class="c05-tag">Web</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete HTML, CSS and Javascript Course</div>
+        <div class="c05-info">32 Course • 7h 32 Min</div>
+        <div class="c05-price">Course Fee - Free</div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./4.png">
+        <span class="c05-tag">iOS</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">IOS and Swift Complete iOS Application Development</div>
+        <div class="c05-info">12 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 699</div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./5.png">
+        <span class="c05-tag">Design</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Learn graphics design with best IT Trainer</div>
+        <div class="c05-info">22 Course • 2h 32 Min</div>
+        <div class="c05-price">Course Fee - 799</div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="c05-card">
+      <div class="c05-img">
+        <img src="./6.png">
+        <span class="c05-tag">Business</span>
+      </div>
+      <div class="c05-content">
+        <div class="c05-stars">★★★★★</div>
+        <div class="c05-title">Complete data science for your next business</div>
+        <div class="c05-info">11 Course • 3h 32 Min</div>
+        <div class="c05-price">Course Fee - 399</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="d01-footer">
+  <div class="d01-footer-container">
+
+    <!-- Column 1 -->
+    <div class="d01-footer-col">
+   <center><h2 class="d01-logo">🎓Catalystprogrammers IT Training Institute</h2></center>   
+      <p class="d01-text">
+      Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit.
+      Fusce vitae risus nec dui
+      venenatis dignissim.
+      </p>
+
+      <div class="d01-social">
+        <a href="#">X</a>
+        <a href="#">F</a>
+        <a href="#">I</a>
+        <a href="#">L</a>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="d01-footer-col">
+      <h3>About catyalast</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Instructor Registration</a></li>
+        <li><a href="#">Become A Teacher</a></li>
+        <li><a href="#">All Instructors</a></li>
+        <li><a href="#">Asked Question</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="d01-footer-col">
+      <h3>Popular Course</h3>
+      <ul>
+        <li><a href="#">Development</a></li>
+        <li><a href="#">Arts & Design</a></li>
+        <li><a href="#">Visual Design</a></li>
+        <li><a href="#">Graphic Design</a></li>
+        <li><a href="#">Code Inspection</a></li>
+        <li><a href="#">Digital Marketing</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="d01-footer-col">
+      <h3>Contact Info</h3>
+      <p>📍6/433, Hans Vihar, RIICO Industrial Area, 
+        Mansarovar, Jaipur, Rajasthan 302020.</p><br>
+      <p>📞 +91 8503967987.</p><br>
+      <p> ✉catalystprogrammers@gmail.com </p><br>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="d01-footer-col">
+      <h3>Download App</h3>
+      <p>Download our app from play store</p>
+
+      <button class="d01-btn">Google Play</button>
+      <button class="d01-btn d01-btn-dark">App Store</button>
+    </div>
+
+  </div>
+
+  <div class="d01-footer-bottom">
+    <p>© 2024 All Rights Reserved</p>
+  </div>
+</footer>
+
+
+</body>
